@@ -1,0 +1,31 @@
+/*======================
+   Deprecated
+======================*/
+
+/* =====================
+   Header & Footer Común
+========================= */
+
+.header-style, .footer-style {
+    background-color: var(--bg-color);
+    color: var(--text-white);
+}
+
+/* =====================
+   Buttons
+========================= */
+
+.button-style-light {
+    background-color: var(--color-white); /* primer cambio */
+    color: var(--text-color);
+}
+
+.button-style-dark {
+    background-color: var(--color-blue-500);
+    color: var(--text-color);
+}
+
+.button-style-none {
+     background-color: transparent;
+     color: var(--text-white);
+}
