@@ -1,0 +1,27 @@
+footer{
+  background: var(--primary-color);
+  color: var(--text-white);
+
+  font-weight: bold;
+
+  font-size: 12px;
+
+  min-height: 40px;
+  border-radius: 5px;
+  padding: 15px 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.media-container a {
+  display: inline-block;
+  color: var(--text-white);
+  text-decoration: none;
+  padding: 0px 6px;
+}
+
+.media-container a:hover {
+  color: var(--secondary-color);
+}
