@@ -1,4 +1,6 @@
-<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-  <mat-button-toggle value="italic">EN</mat-button-toggle>
-  <mat-button-toggle value="underline">ES</mat-button-toggle>
+<mat-button-toggle-group [value]="language" (change)="switchLanguage($event.value)" name="fontStyle" aria-label="Font Style">
+  <mat-button-toggle *ngFor="let lang of languages" [value]="lang">
+    {{lang | uppercase}}
+  </mat-button-toggle>
 </mat-button-toggle-group>
+

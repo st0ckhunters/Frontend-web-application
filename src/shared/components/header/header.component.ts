@@ -3,6 +3,7 @@ import {MatToolbar} from '@angular/material/toolbar';
 import {MatIcon} from '@angular/material/icon';
 import {MatButtonToggle, MatButtonToggleGroup} from '@angular/material/button-toggle';
 import {LanguageButtonComponent} from '../buttons/language-button/language-button.component';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -12,6 +13,7 @@ import {LanguageButtonComponent} from '../buttons/language-button/language-butto
     MatButtonToggleGroup,
     MatButtonToggle,
     LanguageButtonComponent,
+    TranslatePipe,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
