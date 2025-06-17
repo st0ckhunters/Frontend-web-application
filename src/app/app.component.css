@@ -1,0 +1,8 @@
+main{
+  display: flex;
+  gap: 15px;
+}
+app-sign-up-view{
+  width: 900px;
+
+}

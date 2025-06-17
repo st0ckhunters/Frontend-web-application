@@ -1,0 +1,67 @@
+.variant-button-default {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    transition: background-color 0.2s;
+}
+.variant-button-default:hover {
+    background-color: var(--primary-color-hover);
+    color: var(--text-white);
+}
+
+.variant-button-header {
+    background-color: var(--bg-button-color);
+    color: var(--text-color);
+    transition: background-color 0.2s;
+}
+
+.variant-button-header:hover {
+    background-color: var(--bg-button-hover);
+}
+
+.variant-button-link {
+    color: var(--text-white);
+    min-height: 0;
+    min-width: 0;
+}
+
+.variant-button-link:hover {
+    opacity: 0.6;
+}
+
+.variant-button-none {
+    color: inherit;
+    min-height: 0;
+    min-width: 0;
+}
+
+.variant-button-tools {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    width: 5px;
+    height: 5px;
+}
+
+.variant-button-tools:hover {
+    opacity: 0.8;
+}
+
+.variant-button-color {
+    background-color: var(--color-blue-500);
+    color: var(--text-white);
+    transition: background-color 0.2s;
+}
+
+.variant-button-color:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.variant-button-outline {
+    border: 0.15rem solid var(--color-blue-500);
+    background-color: transparent;
+    color: var(--text-color);
+    transition: background-color 0.2s;
+}
+
+.variant-button-outline:hover {
+    background-color: var(--bg-button-hover);
+}

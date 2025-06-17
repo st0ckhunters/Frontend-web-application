@@ -1,0 +1,11 @@
+.layout-bar nav,
+.layout-bar .logo-link,
+.header-right-side,
+.header-tools-button{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.header-logo{
+    width: 2rem;
+}

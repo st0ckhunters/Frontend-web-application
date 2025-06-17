@@ -1,0 +1,23 @@
+<a *ngIf="external"
+   [href]="link"
+   [target]="target"
+   rel="noopener noreferrer"
+   [class]="buttonClass">
+  <app-svg-icon *ngIf="icon" [name]="icon" [variant]="iconVariant"></app-svg-icon>
+  <ng-content></ng-content>
+</a>
+
+<button *ngIf="!external && type"
+        [type]="type"
+        [form]="form"
+        [class]="buttonClass"
+        class="type-html">
+  <ng-content></ng-content>
+</button>
+
+<a *ngIf="!external && !type"
+   [routerLink]="link"
+   [class]="buttonClass">
+  <app-svg-icon *ngIf="icon" [name]="icon" [variant]="iconVariant"></app-svg-icon>
+  <ng-content></ng-content>
+</a>

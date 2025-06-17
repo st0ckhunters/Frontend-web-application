@@ -21,14 +21,23 @@ IMPORTANT: Color Code
 
     /* Blue tones (light - dark) */
     --color-blue-100: #ECF0F3;
+
+    --color-blue-400: #3785eb;
     --color-blue-500: #1A73E8;
+    --color-blue-600: #636970;
+
     --color-blue-700: #2F3740;
     --color-blue-800: #232A33;
 
-    /* Other colors */
+
     --color-red-300: #E57373;
     --color-yellow-300: #FFF59D;
     --color-green-300: #81C784;
 
-    font-family: 'Inter', sans-serif;
+    /* Other colors */
+    --color-purple-200: #a9b2fc;
+    --color-purple-500: #6F7FFA;
+
+    --primary-font-family: 'Inter Regular', sans-serif;
+    --secondary-font-family: 'Sapce Grotesk', sans-serif;
 }

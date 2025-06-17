@@ -8,11 +8,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {HeaderComponent} from '../shared/components/header/header.component';
 import {NgOptimizedImage} from '@angular/common';
+import {SignUpViewComponent} from '../auth/views/sign-up-view/sign-up-view.component';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, FooterComponent, MatButtonToggleModule, MatToolbarModule, MatButtonModule, MatIconModule,
-    MatSlideToggleModule, HeaderComponent, NgOptimizedImage],
+    MatSlideToggleModule, HeaderComponent, NgOptimizedImage, SignUpViewComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
