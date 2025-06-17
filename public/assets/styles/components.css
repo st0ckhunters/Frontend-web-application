@@ -1,31 +1,31 @@
-/*======================
-   Deprecated
-======================*/
+@import url("@shared/styles/components/button.css");
+@import url("@shared/styles/components/header.css");
+@import url("@shared/styles/components/SVGs.css");
+@import url("@shared/styles/components/form.css");
 
-/* =====================
-   Header & Footer Común
-========================= */
+/* -- general components -- */
 
-.header-style, .footer-style {
-    background-color: var(--bg-color);
+.layout-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 15px;
+    width: auto;
+
+    /* colors */
+    background-color: var(--primary-color);
     color: var(--text-white);
 }
 
-/* =====================
-   Buttons
-========================= */
-
-.button-style-light {
-    background-color: var(--color-white); /* primer cambio */
-    color: var(--text-color);
-}
-
-.button-style-dark {
-    background-color: var(--color-blue-500);
-    color: var(--text-color);
-}
-
-.button-style-none {
-     background-color: transparent;
-     color: var(--text-white);
+.error-message{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--error-color);
+    font-weight: bold;
+    font-size: 0.7rem;
+    gap: 0.5rem;
 }

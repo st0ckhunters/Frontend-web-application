@@ -2,7 +2,8 @@
   border-radius: 20px;
 }
 mat-toolbar{
-  background-color: #353d46;
+  background-color: var(--primary-color);
+  /*#353d46;*/
 }
 .start{
   display: flex;
