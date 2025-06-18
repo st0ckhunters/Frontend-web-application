@@ -8,3 +8,7 @@ app-log-in-view{
   align-items: center;
 
 }
+app-sign-up-view{
+  width: 900px;
+  align-items: center;
+}
