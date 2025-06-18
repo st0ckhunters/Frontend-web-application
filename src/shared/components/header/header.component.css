@@ -24,8 +24,6 @@ mat-toolbar{
   gap: 30px;
   align-items: center;
   font-family: "Roboto", sans-serif;
-
-
 }
 button{
   background-color: transparent !important;
