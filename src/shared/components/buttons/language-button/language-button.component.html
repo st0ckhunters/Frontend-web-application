@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 <mat-button-toggle-group [value]="language" (change)="switchLanguage($event.value)" name="fontStyle" aria-label="Font Style">
   <mat-button-toggle *ngFor="let lang of languages" [value]="lang">
     {{lang | uppercase}}

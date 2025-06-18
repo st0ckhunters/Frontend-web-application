@@ -1,24 +1,60 @@
-
+<!--
 <div class="login-container">
-  <h2>Iniciar Sesión</h2>
+  <h2>{{ 'Login' | translate }}</h2>
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
     <div class="form-group">
-      <label for="email">Correo electrónico</label>
+      <label for="email">{{'Email Address' | translate}}</label>
       <input type="email" id="email" formControlName="email" />
+
+      <img src="https://cdn-icons-png.flaticon.com/128/11195/11195330.png" alt="user" width="30px">
+
+
       <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="error">
         Correo inválido
       </div>
     </div>
 
     <div class="form-group">
-      <label for="password">Contraseña</label>
+      <label for="password">{{ 'Password' | translate }}</label>
       <input type="password" id="password" formControlName="password" />
+      <img src="https://cdn-icons-png.flaticon.com/128/4837/4837031.png" alt="lock" width="30px">
       <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="error">
         Contraseña requerida
       </div>
     </div>
 
-    <button type="submit" [disabled]="loginForm.invalid">Entrar</button>
+    <button type="submit" [disabled]="loginForm.invalid">{{ 'Enter' | translate }}</button>
   </form>
 </div>
+-->
 
+
+
+<div class="login-container">
+  <h2>{{ 'Login' | translate }}</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+    <div class="form-group">
+      <label for="email">{{'Email Address' | translate}}</label>
+      <div class="input-with-icon">
+        <input type="email" id="email" formControlName="email" />
+        <img src="https://cdn-icons-png.flaticon.com/128/11195/11195330.png" alt="user" width="20px">
+      </div>
+      <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="error">
+        Correo inválido
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">{{ 'Password' | translate }}</label>
+      <div class="input-with-icon">
+        <input type="password" id="password" formControlName="password" />
+        <img src="https://cdn-icons-png.flaticon.com/128/4837/4837031.png" alt="lock" width="20px">
+      </div>
+      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="error">
+        Contraseña requerida
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid">{{ 'Enter' | translate }}</button>
+  </form>
+</div>

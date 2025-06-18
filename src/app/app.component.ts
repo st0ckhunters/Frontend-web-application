@@ -10,11 +10,12 @@ import {HeaderComponent} from '../shared/components/header/header.component';
 import {NgOptimizedImage} from '@angular/common';
 import {SignUpViewComponent} from '../auth/views/sign-up-view/sign-up-view.component';
 import {InfoService} from '../shared/components/home/services/info.service';
+import {LogInViewComponent} from '../auth/views/log-in-view/log-in-view.component';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, FooterComponent, MatButtonToggleModule, MatToolbarModule, MatButtonModule, MatIconModule,
-    MatSlideToggleModule, HeaderComponent, SignUpViewComponent],
+    MatSlideToggleModule, HeaderComponent, SignUpViewComponent, LogInViewComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

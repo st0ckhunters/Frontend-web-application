@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
-
+import {TranslatePipe} from '@ngx-translate/core';
+import {MatIcon } from '@angular/material/icon';
 @Component({
   selector: 'app-log-in-view',
-    imports: [
-        ReactiveFormsModule
-    ],
+  imports: [
+    ReactiveFormsModule,
+    TranslatePipe,
+    MatIcon,
+  ],
   templateUrl: './log-in-view.component.html',
   styleUrl: './log-in-view.component.css'
 })
