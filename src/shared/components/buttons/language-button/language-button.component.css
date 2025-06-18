@@ -1,3 +1,18 @@
+/* Elimina el check generado internamente */
+.mat-button-toggle-checked .mat-button-toggle-label-content::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* En algunas versiones, también usan un SVG o pseudo icono */
+.mat-button-toggle-checked svg,
+.mat-button-toggle-checked mat-icon {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Opcional: eliminar espacio innecesario */
 .mat-button-toggle-label-content {
-  font-family: "Poppins", sans-serif;
+  padding-left: 0 !important;
 }
