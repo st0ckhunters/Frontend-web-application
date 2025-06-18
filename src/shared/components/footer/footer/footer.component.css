@@ -1,10 +1,36 @@
 .footer {
   position: fixed;
   bottom: 0;
-  left: 0;
   width: 100%;
   text-align: center;
   background-color: #353d46;
   padding: 10px;
+}
+p{
+  color: var(--color-gray-200)
+}
+h4{
+  align-items: center;
+  color: var(--color-gray-200)
+
+
+}
+.networks a {
+  color: var(--color-gray-200); /* color claro, puedes usar #fff si quieres blanco puro */
+  font-size: 24px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.networks a:hover {
+  color: #2391d8;
+}
+.social-list {
+
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin: 0;
 }
 
