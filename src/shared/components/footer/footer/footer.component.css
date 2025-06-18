@@ -7,4 +7,7 @@
   background-color: #353d46;
   padding: 10px;
 }
+p{
+  color: var(--color-gray-200)
+}
 
