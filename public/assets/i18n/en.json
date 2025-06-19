@@ -33,6 +33,38 @@
     "Products": "Products",
     "Customers": "Customers"
   },
+  "Planner-view": {
+    "Hello": "Hello User",
+    "Basic": "Basic",
+    "Business": "Business",
+    "Basic_description": "ideal para negocios que recien comienzan",
+    "Pro_description": "Para negocios en crecimiento que necesitan más control",
+    "Business_description": "Para empresas con operaciones más complejas",
+    "Basic_item1": "Up to 50 products",
+    "Basic_item2": "1 user",
+    "Basic_item3": "Basic stock management",
+    "Basic_item4": "Simple Reports",
+    "Basic_item5": "Acces to any device",
+    "Basic_Start": "Start for Free",
+
+    "Pro_item1": "Up to 1000 products",
+    "Pro_item2": "up to 3 users",
+    "Pro_item3": "Advance reports and exportation",
+    "Pro_item4": "Low stock alarm",
+    "Pro_item5": "Customers and providers management",
+    "Pro_item6": "Email support",
+    "Pro_Start": "Update to Pro Plan",
+
+    "Business_item1": "Unlimited products",
+    "Business_item2": "Unlimited users",
+    "Business_item3": "Multi warehouses and Multi branch",
+    "Business_item4": "Customize metrics panel",
+    "Business_item5": "Priority Support",
+    "Business_item6": "Beginning training included",
+    "Business_Update": "Update to Business Plan"
+
+
+  },
 
   "NotFoundMessage": {
     "msgnf": "Oops! The page you're looking for doesn't exist.",
@@ -43,3 +75,4 @@
     "Welcome": "Welcome"
   }
 }
+
