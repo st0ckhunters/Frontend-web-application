@@ -1,0 +1,35 @@
+.not-found-container {
+  text-align: center;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #444;
+}
+
+.not-found-container h1 {
+  font-size: 100px;
+  margin: 0;
+  color: #d32f2f;
+}
+
+.not-found-container p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.not-found-container button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.not-found-container button:hover {
+  background-color: #1565c0;
+}
+h2{
+  font-size:  100px;
+}
