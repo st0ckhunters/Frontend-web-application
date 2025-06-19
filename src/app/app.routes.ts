@@ -14,5 +14,10 @@ export const routes: Routes = [
   { path: 'item-users', component: ItemUsersComponent },
   { path: 'accounts', component: AccountViewComponent},
   { path: 'not-found', component: NotFoundComponent },
-  { path: '**', redirectTo: 'not-found' }
+  { path: '**', redirectTo: 'not-found' },
+  {path:'Reports', component: NotFoundComponent },
+  {path:'Sales', component: NotFoundComponent },
+  {path:'Products', component: NotFoundComponent },
+  {path:'Customers', component: NotFoundComponent },
+
 ];
