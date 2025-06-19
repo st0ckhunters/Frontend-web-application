@@ -16,7 +16,7 @@ IMPORTANT: Color Code
     /* Gray tones (white - black) */
     --color-white: #ffffff;
     --color-gray-100: #E5E5E5;
-    --color-gray-200: #D9D9D9; /* color for links, currently not in use */
+    --color-gray-200: #ececec; /* color for links, currently not in use */
     --color-gray-900: #262626;
 
     /* Blue tones (light - dark) */

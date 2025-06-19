@@ -1,0 +1,22 @@
+mat-card{
+  width: 180px;
+  height: 180px;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+mat-card-title{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.imgCard{
+  width: 50px;
+  justify-content: center;
+  align-items:  center;
+}
+mat-card-actions{
+  align-items: center;
+  justify-content: center;
+}

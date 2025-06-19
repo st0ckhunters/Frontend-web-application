@@ -8,6 +8,9 @@
   border-radius: 8px;
   box-shadow: 0 5px 50px rgba(255, 255, 255, 0.46);
 }*/
+.union{
+  display: flex;
+}
 .login-container{
   width: 500px;
   height: auto;
@@ -87,4 +90,10 @@ button {
 button:disabled {
   background-color: #aaa;
   cursor: not-allowed;
+}
+
+.imgMain{
+  display: flex;
+  gap: 150px;
+  margin: 70px auto;
 }

@@ -1,27 +1,25 @@
 <mat-toolbar>
   <div class="start">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <img class="logo" src="https://avatars.githubusercontent.com/u/208889289?s=48&v=4">
-    <span><strong>St0ckHunters</strong></span>
+    <a href=""><img class="logo" src="https://avatars.githubusercontent.com/u/208889289?s=48&v=4"></a>
+    <span><strong><a href="">St0ckHunters</a></strong></span>
     <span class="example-spacer"></span>
   </div>
   <div class="mid">
 
     <span class="options">
       <button matIconButton class="example-icon" aria-label="Example icon-button with share icon">
-        <a href="/signup"><strong>{{'Sign up' | translate}}</strong></a>
+        <a href="/signup"><strong>{{'Header.Sign up' | translate}}</strong></a>
       </button>
       <div class="login">
       <button matIconButton class="example-icon" aria-label="Example icon-button with share icon">
-        <a href="/login"><strong>{{ 'Login' | translate }}</strong></a>
+        <a href="/login"><strong>{{ 'Header.Login' | translate }}</strong></a>
       </button>
         </div>
     </span>
   </div>
   <div class="end">
     <app-language-button></app-language-button>
-
-
   </div>
 </mat-toolbar>
 
