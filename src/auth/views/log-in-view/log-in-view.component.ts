@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {TranslatePipe} from '@ngx-translate/core';
 import {MatIcon } from '@angular/material/icon';
+import {Router} from "@angular/router";
 @Component({
   selector: 'app-log-in-view',
   imports: [
@@ -15,7 +16,7 @@ import {MatIcon } from '@angular/material/icon';
 export class LogInViewComponent {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
@@ -27,6 +28,7 @@ export class LogInViewComponent {
       const { email, password } = this.loginForm.value;
       console.log('Login:', email, password);
       // Aquí puedes llamar a tu servicio de autenticación
+      this.router.navigate(['/accounts'])
     }
   }
 }

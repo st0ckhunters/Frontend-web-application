@@ -6,9 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class InfoService {
-  private apiUrl = 'https://restcountries.com/v3.1/all';
+  private apiUrl = 'https://fakeapi-3oxx.onrender.com/api/users';
 
   constructor(private http: HttpClient) {}
+
   getAllInfo(): Observable<any[]>{
     return this.http.get<any[]>(this.apiUrl);
   }
