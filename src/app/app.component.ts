@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {FooterComponent} from '../shared/components/footer/footer/footer.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
@@ -11,6 +11,8 @@ import {NgOptimizedImage} from '@angular/common';
 import {SignUpViewComponent} from '../auth/views/sign-up-view/sign-up-view.component';
 import {InfoService} from '../shared/components/home/services/info.service';
 import {LogInViewComponent} from '../auth/views/log-in-view/log-in-view.component';
+import {AccountService} from '../auth/services/account.service';
+
 
 @Component({
   selector: 'app-root',
@@ -19,18 +21,20 @@ import {LogInViewComponent} from '../auth/views/log-in-view/log-in-view.componen
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title(title: any){
     throw new Error('Method not implemented.');
   }
   infos: any[]=[];
-  constructor(private infoService: InfoService) {}
+
+  constructor(private Account: AccountService) {}
+
   ngOnInit() {
-    this.infoService.getAllInfo().subscribe(data => {
+    this.Account.getAllUsers().subscribe(data => {
       this.infos = data;
     });
   }
   changeLang(es:String){
-
   }
+
 }
