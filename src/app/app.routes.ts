@@ -1,9 +1,14 @@
 import { Routes } from '@angular/router';
 
-const LogInComponent=()=>import('../auth/views/log-in-view/log-in-view.component').then(m=>m.LogInViewComponent);
-const TestingRoute=()=>import('../app/shared/testing-route/testing-route.component').then(m=>m.TestingRouteComponent);
-export const routes: Routes = [
+import {LogInViewComponent} from '../auth/views/log-in-view/log-in-view.component';
+import {SignUpViewComponent} from '../auth/views/sign-up-view/sign-up-view.component';
+import {NotFoundError} from 'rxjs';
+import {NotFoundComponent} from '../shared/components/notfound/not-found/not-found.component';
 
-  { path: 'testing', loadComponent: TestingRoute},
-  { path: 'login', loadComponent: LogInComponent},
+export const routes: Routes = [
+  { path: '', component: LogInViewComponent },
+  { path: 'login', component: LogInViewComponent },
+  { path: 'signup', component: SignUpViewComponent },
+  { path: 'not-found', component: NotFoundComponent },
+  { path: '**', redirectTo: 'not-found' }
 ];

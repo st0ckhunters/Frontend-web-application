@@ -1,13 +1,21 @@
 main{
   display: flex;
   gap: 15px;
+  margin-left: 220px;
 }
+.imgMain{
+  gap: 150px;
+  margin: 70px auto;
+}
+
 app-log-in-view{
 
   width: 900px;
   align-items: center;
 
 }
+
+
 
 app-sign-up-view{
   width: 900px;
