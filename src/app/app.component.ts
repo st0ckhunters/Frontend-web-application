@@ -11,13 +11,18 @@ import {NgOptimizedImage} from '@angular/common';
 import {SignUpViewComponent} from '../auth/views/sign-up-view/sign-up-view.component';
 import {InfoService} from '../shared/components/home/services/info.service';
 import {LogInViewComponent} from '../auth/views/log-in-view/log-in-view.component';
+
 import {AccountService} from '../auth/services/account.service';
+
+
+//import {NavBarComponent} from '../shared/components/nav-bar/nav-bar.component';
+import {PlannerViewComponent} from '../auth/views/planner-view/planner-view.component';
 
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, FooterComponent, MatButtonToggleModule, MatToolbarModule, MatButtonModule, MatIconModule,
-    MatSlideToggleModule, HeaderComponent, SignUpViewComponent, LogInViewComponent],
+    MatSlideToggleModule, HeaderComponent, SignUpViewComponent, LogInViewComponent,PlannerViewComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

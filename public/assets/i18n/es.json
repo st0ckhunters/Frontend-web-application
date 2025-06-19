@@ -9,7 +9,6 @@
     "Sign up": "Registrarse",
     "Login": "Ingresar"
   },
-
   "LoginView": {
     "Login": "Ingresar",
     "Email Address": "Correo Electrónico",
@@ -31,6 +30,41 @@
     "Sales": "Ventas",
     "Products": "Productos",
     "Customers": "Clientes"
+  },
+  "Planner-view": {
+    "Hello": "Hola User",
+    "Basic": "Basic",
+    "Business": "Business",
+    "Basic_description": "ideal para negocios que recien comienzan",
+    "Pro_description": "Para negocios en crecimiento que necesitan más control",
+    "Business_description": "Para empresas con operaciones más complejas",
+    "Basic_item1": "Hasta 50 productos",
+    "Basic_item2": "1 usuario",
+    "Basic_item3": "Gestión de inventario básica",
+    "Basic_item4": "Reportes simples",
+    "Basic_item5": "Acceso desde cualquier dispositivo",
+    "Basic_Start": "Empieza gratis",
+
+    "Pro_item1": "Hasta 1000 productos",
+    "Pro_item2": "Hasta 3 usuarios",
+    "Pro_item3": "Reportes avanzados y exportación",
+    "Pro_item4": "Alerta de stock bajo",
+    "Pro_item5": "Gestión de clientes proovedores",
+    "Pro_item6": "Soporte por correo",
+    "Pro_Start": "Actualizar a Pro",
+
+    "Business_item1": "Productos ilimitados",
+    "Business_item2": "Usuarios ilimitados",
+    "Business_item3": "Multialmacén y multisucursal",
+    "Business_item4": "Paneles de metricas personalizables",
+    "Business_item5": "Soporte Prioritario",
+    "Business_item6": "Beginning training included",
+    "Business_Update": "Update to Business Plan"
+
+  },
+  "Main_App": {
+    "Hello": "Hola Usuario",
+    "Review": "Resumen"
   },
 
   "NotFoundMessage": {
