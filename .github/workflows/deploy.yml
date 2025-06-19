@@ -30,15 +30,12 @@ jobs:
         run: echo "REPO_NAME=${GITHUB_REPOSITORY##*/}" >> $GITHUB_ENV
 
       - name: Build Angular project
-        run: |
-          npm run build -- --base-href=/${{ env.REPO_NAME }}/
-        env:
-          VITE_API_URL: ${{ secrets.VITE_API_URL }}
+        run: npm run build -- --base-href=/${{ env.REPO_NAME }}/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist/$(node -p "require('./angular.json').defaultProject")
+          path: ./dist/webapp
 
   deploy:
     needs: build
