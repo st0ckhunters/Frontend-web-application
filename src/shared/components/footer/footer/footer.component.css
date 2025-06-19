@@ -17,10 +17,11 @@ h4{
 
 }
 .networks a {
-  color: var(--color-gray-200); /* color claro, puedes usar #fff si quieres blanco puro */
+  color: var(--color-gray-100);
   font-size: 24px;
   transition: color 0.3s ease;
   text-decoration: none;
+  justify-content: space-evenly;
 }
 
 .networks a:hover {

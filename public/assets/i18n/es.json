@@ -65,6 +65,15 @@
   "Main_App": {
     "Hello": "Hola Usuario",
     "Review": "Resumen"
+  },
+
+  "NotFoundMessage": {
+    "msgnf": "¡Ups! La página que estás buscando no existe.",
+    "Return": "Regresar"
+  },
+
+  "Account": {
+    "Welcome": "Bienvenido"
   }
 
 }

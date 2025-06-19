@@ -1,9 +1,9 @@
 <div class="not-found-container">
   <h1>404</h1>
   <h2>😅</h2>
-  <p>¡Ups! La página que estás buscando no existe.</p>
+  <p>{{ 'NotFoundMessage.msgnf' | translate }}</p>
   <button mat-raised-button color="primary" routerLink="/login">
-    Volver al inicio
+    {{ 'NotFoundMessage.Return' | translate }}
   </button>
 
 </div>

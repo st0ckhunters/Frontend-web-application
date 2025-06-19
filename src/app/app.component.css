@@ -1,4 +1,4 @@
-main{
+/*main{
   display: flex;
   gap: 15px;
   margin-left: 220px;
@@ -6,7 +6,7 @@ main{
 .imgMain{
   gap: 150px;
   margin: 70px auto;
-}
+}*/
 
 app-log-in-view{
 

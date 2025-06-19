@@ -1,3 +1,4 @@
+<div class="union">
 <div class="login-container">
   <h2>{{ 'SignupView.Register' | translate }}</h2>
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="login-form">
@@ -55,4 +56,6 @@
 
     <button type="submit" [disabled]="registerForm.invalid">{{ 'SignupView.Register' | translate }}</button>
   </form>
+</div>
+<img class="imgMain" src="assets/login.svg" width="400" alt="Login SVG">
 </div>

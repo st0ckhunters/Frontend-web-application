@@ -64,6 +64,15 @@
     "Business_Update": "Update to Business Plan"
 
 
+  },
+
+  "NotFoundMessage": {
+    "msgnf": "Oops! The page you're looking for doesn't exist.",
+    "Return": "Return"
+  },
+
+  "Account": {
+    "Welcome": "Welcome"
   }
 }
 

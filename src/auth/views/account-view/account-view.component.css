@@ -1,0 +1,24 @@
+.tittle{
+  text-align: center;
+  color: var(--color-white)
+}
+
+/*check after the size of the image*/
+.imgProfile{
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 50px auto;
+  position: relative;
+  border: 3px solid var(--color-gray-200);
+  border-radius: 100px;
+  background-color: var(--color-gray-100);
+}
+.cards{
+  display: flex;
+  gap: 50px;
+  margin: 70px auto;
+  justify-content: space-evenly;
+
+}
