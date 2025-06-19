@@ -1,3 +1,4 @@
+// src/app/models/users.ts
 export interface User {
   id: string;
   organization_id: string;

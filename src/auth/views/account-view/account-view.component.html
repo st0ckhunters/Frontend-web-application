@@ -1,11 +1,4 @@
-<img class="imgProfile" alt="imageCompany" src="https://cdn-icons-png.flaticon.com/128/7593/7593468.png">
-<h2 class="tittle"> {{ 'Account.Welcome' | translate }}  [Empresa]</h2>
 <div class="cards">
-  <app-item-users></app-item-users>
-  <app-item-users></app-item-users>
-  <app-item-users></app-item-users>
-  <app-item-users></app-item-users>
-  <app-item-users></app-item-users>
-
+  <h2 class="tittle">{{ 'Account.Welcome' | translate }} [Empresa]</h2>
+  <app-item-users *ngFor="let user of users" [user]="user"></app-item-users>
 </div>
-
