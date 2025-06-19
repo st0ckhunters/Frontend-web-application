@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import {LogInViewComponent} from '../auth/views/log-in-view/log-in-view.component';
 import {SignUpViewComponent} from '../auth/views/sign-up-view/sign-up-view.component';
-import {NotFoundError} from 'rxjs';
 import {NotFoundComponent} from '../shared/components/notfound/not-found/not-found.component';
 import {ItemUsersComponent} from '../auth/components/item-users/item-users.component';
 import {AccountViewComponent} from '../auth/views/account-view/account-view.component';

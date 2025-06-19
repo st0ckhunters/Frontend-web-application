@@ -3,11 +3,17 @@
     <div mat-card-avatar class="example-header-image"></div>
   </mat-card-header>
 
-  <img class="imgCard" mat-card-image src="https://cdn-icons-png.flaticon.com/128/18831/18831899.png" alt="Photo of a Shiba Inu">
+  <img *ngIf="user.profile_image_url" class="imgCard" mat-card-image [src]="user.profile_image_url" alt="Profile Image">
+  <img *ngIf="!user.profile_image_url" class="imgCard" mat-card-image src="https://cdn-icons-png.flaticon.com/128/18831/18831899.png" alt="Default Profile Image">
 
   <mat-card-title>
-    {{'AccountView.Username}}
+    {{ user.username }}
   </mat-card-title>
+  <mat-card-content>
+    <p><strong>{{ 'AccountView.Email' | translate }}:</strong> {{ user.email }}</p>
+    <p><strong>{{ 'AccountView.Role' | translate }}:</strong> {{ user.role }}</p>
+    <p><strong>{{ 'AccountView.CreatedAt' | translate }}:</strong> {{ user.created_at | date: 'short' }}</p>
+  </mat-card-content>
   <mat-card-actions>
     <button mat-button>SELECT</button>
   </mat-card-actions>
