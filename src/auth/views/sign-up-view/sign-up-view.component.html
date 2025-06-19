@@ -1,10 +1,11 @@
+<div class="union">
 <div class="login-container">
-  <h2>{{ 'Register' | translate }}</h2>
+  <h2>{{ 'SignupView.Register' | translate }}</h2>
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="login-form">
 
     <!-- Nombre -->
     <div class="form-group">
-      <label for="name">{{ 'name' | translate }}</label>
+      <label for="name">{{ 'SignupView.name' | translate }}</label>
       <div class="input-with-icon">
         <input type="text" id="name" formControlName="name" />
         <img src="https://cdn-icons-png.flaticon.com/128/1828/1828413.png" alt="user" width="20px" />
@@ -16,7 +17,7 @@
 
     <!-- Apellido -->
     <div class="form-group">
-      <label for="lastName">{{ 'last name' | translate }}</label>
+      <label for="lastName">{{ 'SignupView.last name' | translate }}</label>
       <div class="input-with-icon">
         <input type="text" id="lastName" formControlName="lastName" />
         <img src="https://cdn-icons-png.flaticon.com/128/1828/1828413.png" alt="user" width="20px" />
@@ -28,7 +29,7 @@
 
     <!-- Email -->
     <div class="form-group">
-      <label for="email">{{ 'Email Address' | translate }}</label>
+      <label for="email">{{ 'SignupView.Email Address' | translate }}</label>
       <div class="input-with-icon">
         <input type="email" id="email" formControlName="email" />
         <img src="https://cdn-icons-png.flaticon.com/128/11195/11195330.png" alt="mail" width="20px" />
@@ -43,7 +44,7 @@
 
     <!-- Contraseña -->
     <div class="form-group">
-      <label for="password">{{ 'Password' | translate }}</label>
+      <label for="password">{{ 'SignupView.Password' | translate }}</label>
       <div class="input-with-icon">
         <input type="password" id="password" formControlName="password" />
         <img src="https://cdn-icons-png.flaticon.com/128/4837/4837031.png" alt="lock" width="20px" />
@@ -53,6 +54,8 @@
       </div>
     </div>
 
-    <button type="submit" [disabled]="registerForm.invalid">{{ 'Register' | translate }}</button>
+    <button type="submit" [disabled]="registerForm.invalid">{{ 'SignupView.Register' | translate }}</button>
   </form>
+</div>
+<img class="imgMain" src="assets/login.svg" width="400" alt="Login SVG">
 </div>
