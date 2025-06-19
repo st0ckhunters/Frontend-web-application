@@ -12,11 +12,12 @@ import {SignUpViewComponent} from '../auth/views/sign-up-view/sign-up-view.compo
 import {InfoService} from '../shared/components/home/services/info.service';
 import {LogInViewComponent} from '../auth/views/log-in-view/log-in-view.component';
 import {NavBarComponent} from '../shared/components/nav-bar/nav-bar.component';
+import {PlannerViewComponent} from '../auth/views/planner-view/planner-view.component';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, FooterComponent, MatButtonToggleModule, MatToolbarModule, MatButtonModule, MatIconModule,
-    MatSlideToggleModule, HeaderComponent, SignUpViewComponent, LogInViewComponent,NavBarComponent],
+    MatSlideToggleModule, HeaderComponent, SignUpViewComponent, LogInViewComponent,NavBarComponent,PlannerViewComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
