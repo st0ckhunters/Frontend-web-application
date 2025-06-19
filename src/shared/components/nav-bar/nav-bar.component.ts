@@ -22,9 +22,5 @@ import {MatAnchor} from "@angular/material/button";
 })
 export class NavBarComponent {
 
-  options=[
-    {link:'/testing', label: 'Test'},
-    {link:'/login', label: 'Login'}
-  ]
 
 }

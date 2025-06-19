@@ -1,13 +1,18 @@
 <mat-toolbar>
+    <div class=start>
+    </div>
     <div class="mid">
-        @for (options of options; track options.label){
-            <a mat-button [routerLink]="options.link" routerLinkActive="active">{{options.label | translate}} </a>
-        }
     </div>
 
     <div class="end">
+        <a mat-button href="/Customers"><strong>{{'Navegation.Customers' | translate}}</strong></a>
+        <a mat-button href="/Products"><strong>{{ 'Navegation.Products' | translate }}</strong></a>
+        <a mat-button href="/Sales"><strong>{{ 'Navegation.Sales' | translate }}</strong></a>
+        <a mat-button href="/Reports"><strong>{{ 'Navegation.Reports' | translate }}</strong></a>
+
         <app-language-button/>
     </div>
+
 
 
 </mat-toolbar>

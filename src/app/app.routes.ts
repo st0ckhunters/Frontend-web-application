@@ -10,5 +10,10 @@ export const routes: Routes = [
   { path: 'login', component: LogInViewComponent },
   { path: 'signup', component: SignUpViewComponent },
   { path: 'not-found', component: NotFoundComponent },
-  { path: '**', redirectTo: 'not-found' }
+  { path: '**', redirectTo: 'not-found' },
+  {path:'Reports', component: NotFoundComponent },
+  {path:'Sales', component: NotFoundComponent },
+  {path:'Products', component: NotFoundComponent },
+  {path:'Customers', component: NotFoundComponent },
+
 ];

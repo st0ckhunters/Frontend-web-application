@@ -1,12 +1,35 @@
 {
-  "Developed by":"Desarrollado por",
-  "Sign up": "Registrarse",
-  "Login": "Ingresar",
-  "All Copyright Reserved": "Todos los derechos reservados",
-  "Email Address": "Correo Electrónico",
-  "Password": "Contraseña",
-  "Enter": "Ingresar",
-  "follow us on our networks": "siguenos en nuestras redes",
-  "name": "Nombre",
-  "last name": "Apellido"
+
+  "Footer": {
+    "Developed by":"Desarrollado por",
+    "All Copyright Reserved": "Todos los derechos reservados",
+    "follow us on our networks": "siguenos en nuestras redes"
+  },
+  "Header": {
+    "Sign up": "Registrarse",
+    "Login": "Ingresar"
+  },
+  "LoginView": {
+    "Login": "Ingresar",
+    "Email Address": "Correo Electrónico",
+    "Password": "Contraseña",
+    "Enter": "Ingresar"
+  },
+
+
+  "SignupView": {
+    "Register": "Registrarse",
+    "name": "Nombre",
+    "last name": "Apellido",
+    "Email Address": "Correo Electrónico",
+    "Password": "Contraseña"
+  },
+
+  "Navegation": {
+    "Reports": "Reportes",
+    "Sales": "Ventas",
+    "Products": "Productos",
+    "Customers": "Clientes"
+  }
+
 }

@@ -1,13 +1,37 @@
 {
-  "Developed by":"Developed by",
-  "Sign up": "Sign up",
-  "Login": "Login",
-  "All Copyright Reserved": "All Copyright Reserved",
-  "Email Address": "Email Address",
-  "Password": "Password",
-  "Enter": "Enter",
-  "follow us on our networks": "follow us on our networks",
-  "name": "Name",
-  "last name": "Last name"
+
+
+  "Footer": {
+    "Developed by":"Developed by",
+    "All Copyright Reserved": "All Copyright Reserved",
+    "follow us on our networks": "follow us on our networks"
+  },
+
+  "Header": {
+    "Sign up": "Sign up",
+    "Login": "Login"
+  },
+
+  "LoginView": {
+    "Login": "Login",
+    "Email Address": "Email Address",
+    "Password": "Password",
+    "Enter": "Enter"
+  },
+
+  "SignupView": {
+    "Register": "Register",
+    "name": "Name",
+    "last name": "Last Name",
+    "Email Address": "Email Address",
+    "Password": "Password"
+  },
+
+  "Navegation": {
+    "Reports": "Reports",
+    "Sales": "Sales",
+    "Products": "Products",
+    "Customers": "Customers"
+  }
 }
 
