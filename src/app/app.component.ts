@@ -14,6 +14,7 @@ import {LogInViewComponent} from '../auth/views/log-in-view/log-in-view.componen
 
 import {AccountService} from '../auth/services/account.service';
 
+import {ClientsViewsComponent} from '../auth/views/clients-views/clients-views.component';
 
 //import {NavBarComponent} from '../shared/components/nav-bar/nav-bar.component';
 import {PlannerViewComponent} from '../auth/views/planner-view/planner-view.component';
@@ -22,7 +23,7 @@ import {PlannerViewComponent} from '../auth/views/planner-view/planner-view.comp
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, FooterComponent, MatButtonToggleModule, MatToolbarModule, MatButtonModule, MatIconModule,
-    MatSlideToggleModule, HeaderComponent, SignUpViewComponent, LogInViewComponent,PlannerViewComponent],
+    MatSlideToggleModule, HeaderComponent, SignUpViewComponent, LogInViewComponent,PlannerViewComponent,ClientsViewsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
