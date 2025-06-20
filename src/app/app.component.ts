@@ -15,6 +15,8 @@ import {LogInViewComponent} from '../auth/views/log-in-view/log-in-view.componen
 import {AccountService} from '../auth/services/account.service';
 import { ProductsService} from '../auth/services/products.service';
 
+import {ClientsViewsComponent} from '../auth/views/clients-views/clients-views.component';
+
 //import {NavBarComponent} from '../shared/components/nav-bar/nav-bar.component';
 import {PlannerViewComponent} from '../auth/views/planner-view/planner-view.component';
 import {ComponentsProductsComponent} from '../auth/components/components-products/components-products.component';
@@ -23,7 +25,7 @@ import {ComponentsProductsComponent} from '../auth/components/components-product
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, FooterComponent, MatButtonToggleModule, MatToolbarModule, MatButtonModule, MatIconModule,
-    MatSlideToggleModule, HeaderComponent, SignUpViewComponent, LogInViewComponent,PlannerViewComponent, ComponentsProductsComponent],
+    MatSlideToggleModule, HeaderComponent, SignUpViewComponent, LogInViewComponent,PlannerViewComponent, ComponentsProductsComponent, ClientsViewsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -31,7 +33,6 @@ export class AppComponent implements OnInit {
   title(title: any){
     throw new Error('Method not implemented.');
   }
-
   infos: any[]=[];
   productinfo: any[]=[];
 

@@ -5,6 +5,7 @@ import {NotFoundComponent} from '../shared/components/notfound/not-found/not-fou
 import {ItemUsersComponent} from '../auth/components/item-users/item-users.component';
 import {AccountViewComponent} from '../auth/views/account-view/account-view.component';
 import {ProductsViewComponent} from '../auth/views/products-view/products-view.component';
+import {ClientsViewsComponent} from '../auth/views/clients-views/clients-views.component';
 
 export const routes: Routes = [
   { path: '', component: LogInViewComponent },
@@ -19,5 +20,7 @@ export const routes: Routes = [
   {path:'Sales', component: NotFoundComponent },
   {path:'Products', component: NotFoundComponent },
   {path:'Customers', component: NotFoundComponent },
+
+  {path: 'Clients', component: ClientsViewsComponent },
 
 ];
