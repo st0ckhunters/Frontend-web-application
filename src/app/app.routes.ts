@@ -14,13 +14,13 @@ export const routes: Routes = [
   { path: 'item-users', component: ItemUsersComponent },
   { path: 'accounts', component: AccountViewComponent},
   { path: 'products', component: ProductsViewComponent },
+  {path: 'clients', component: ClientsViewsComponent },
   { path: 'not-found', component: NotFoundComponent },
   { path: '**', redirectTo: 'not-found' },
-  {path:'Reports', component: NotFoundComponent },
-  {path:'Sales', component: NotFoundComponent },
-  {path:'Products', component: NotFoundComponent },
+  {path:'reports', component: NotFoundComponent },
+  {path:'sales', component: NotFoundComponent },
   {path:'Customers', component: NotFoundComponent },
 
-  {path: 'Clients', component: ClientsViewsComponent },
+
 
 ];
