@@ -1,0 +1,14 @@
+<!-- src/app/auth/components/components-products/components-products.component.html -->
+<div class="products-container">
+  <h2>{{ 'Products.Title' | translate }} [Tienda]</h2>
+  <div class="products-grid" *ngFor="let product of productinfo">
+    <div class="product-card">
+      <img [src]="product.image_url" alt="{{ product.name }}" class="product-image">
+      <h3 class="product-name">{{ product.name }}</h3>
+      <p class="product-category">Categoría: {{ product.category_id }}</p>
+      <p class="product-date">Creado: {{ product.created_at | date:'medium' }}</p>
+      <p class="product-date">Actualizado: {{ product.updated_at | date:'medium' }}</p>
+    </div>
+  </div>
+  <p *ngIf="productinfo.length === 0">Cargando productos...</p>
+</div>

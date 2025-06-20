@@ -1,0 +1,26 @@
+/* src/app/auth/views/products-view/products-view.component.css */
+.tittle {
+  text-align: center;
+  color: var(--color-white);
+}
+
+/* Ajustamos el tamaño de la imagen si la usas */
+.imgProfile {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 50px auto;
+  position: relative;
+  border: 3px solid var(--color-gray-200);
+  border-radius: 100px;
+  background-color: var(--color-gray-100);
+}
+
+.cards {
+  display: flex;
+  gap: 50px;
+  margin: 70px auto;
+  justify-content: space-evenly;
+  flex-wrap: wrap; /* Añadimos esto pa’ que sea responsivo */
+}

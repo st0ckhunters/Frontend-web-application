@@ -1,0 +1,24 @@
+<h2>Clients</h2>
+<hr />
+
+<div class="client-list">
+  <div *ngFor="let client of clients" class="client-card">
+    <strong>{{ client.first_name }}</strong><br>
+    <button>Ver más</button>
+  </div>
+</div>
+
+<h3>Añadir información del Cliente</h3>
+
+<form (ngSubmit)="addClient()">
+  <label>
+    Nombre del Cliente *
+    <input type="text" [(ngModel)]="newclient.first_name" name="first name" required />
+    <input type="text" [(ngModel)]="newclient.last_name" name="last name" required />
+  </label>
+  <label>
+    Compañia del Cliente *
+    <input type="text" [(ngModel)]="newclient.company" name="company" required />
+  </label>
+  <button type="submit">Añadir</button>
+</form>

@@ -13,16 +13,19 @@ import {InfoService} from '../shared/components/home/services/info.service';
 import {LogInViewComponent} from '../auth/views/log-in-view/log-in-view.component';
 
 import {AccountService} from '../auth/services/account.service';
+import { ProductsService} from '../auth/services/products.service';
 
+import {ClientsViewsComponent} from '../auth/views/clients-views/clients-views.component';
 
 //import {NavBarComponent} from '../shared/components/nav-bar/nav-bar.component';
 import {PlannerViewComponent} from '../auth/views/planner-view/planner-view.component';
+import {ComponentsProductsComponent} from '../auth/components/components-products/components-products.component';
 
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, FooterComponent, MatButtonToggleModule, MatToolbarModule, MatButtonModule, MatIconModule,
-    MatSlideToggleModule, HeaderComponent, SignUpViewComponent, LogInViewComponent,PlannerViewComponent],
+    MatSlideToggleModule, HeaderComponent, SignUpViewComponent, LogInViewComponent,PlannerViewComponent, ComponentsProductsComponent, ClientsViewsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -31,14 +34,23 @@ export class AppComponent implements OnInit {
     throw new Error('Method not implemented.');
   }
   infos: any[]=[];
+  productinfo: any[]=[];
 
-  constructor(private Account: AccountService) {}
+  constructor(private Account: AccountService,
+              private Product: ProductsService
+  ) {}
 
   ngOnInit() {
     this.Account.getAllUsers().subscribe(data => {
       this.infos = data;
     });
+
+    this.Product.getAllProducts().subscribe(data => {
+      this.productinfo = data;
+    });
   }
+
+
   changeLang(es:String){
   }
 
