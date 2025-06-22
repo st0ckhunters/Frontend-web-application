@@ -4,10 +4,12 @@ import {Clients} from '../../models/clients';
 import {ClientsService} from '../../services/clients.service';
 import {FormsModule} from '@angular/forms';
 import {NgForOf} from '@angular/common';
+import {HeaderComponent} from '../../../shared/components/header/header.component';
+import {NavBarComponent} from '../../../shared/components/nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-clients-views',
-  imports: [MatCard, FormsModule, NgForOf],
+  imports: [MatCard, FormsModule, NgForOf, HeaderComponent, NavBarComponent],
   templateUrl: './clients-views.component.html',
   styleUrl: './clients-views.component.css'
 })

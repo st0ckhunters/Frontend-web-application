@@ -5,6 +5,8 @@ import {TranslatePipe} from '@ngx-translate/core';
 import { AccountService } from '../../services/account.service';
 import { User } from '../../models/users';
 import {NgForOf} from '@angular/common';
+import {HeaderComponent} from '../../../shared/components/header/header.component';
+import {NavBarComponent} from '../../../shared/components/nav-bar/nav-bar.component';
 
 
 @Component({
@@ -14,6 +16,8 @@ import {NgForOf} from '@angular/common';
     ItemUsersComponent,
     TranslatePipe,
     NgForOf,
+    HeaderComponent,
+    NavBarComponent,
   ],
   templateUrl: './account-view.component.html',
   styleUrl: './account-view.component.css'
