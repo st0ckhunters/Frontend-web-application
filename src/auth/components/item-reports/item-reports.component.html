@@ -1,0 +1,68 @@
+
+<div class="reports-container">
+  <div class="header">
+    <h1>{{ 'Reports.Report' | translate }}</h1>
+    <div class="divider"></div>
+  </div>
+
+  <mat-card class="chart-section">
+    <mat-card-content>
+      <h2 class="section-title">{{ 'REPORTS.DAILY_SALES' | translate }}</h2>
+      <div class="chart-container">
+        <div class="chart-wrapper">
+          <canvas #salesChart></canvas>
+        </div>
+        <div class="chart-stats">
+          <mat-card class="stats-card">
+            <mat-card-content>
+              <div class="stats-amount">{{ dashboardData.totalAmount | currency:'PEN':'symbol':'1.2-2' }}</div>
+              <div class="stats-label">{{ dashboardData.totalTransactions }} {{ 'REPORTS.TRANSACTIONS' | translate }}</div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Grid de Productos -->
+  <div class="products-grid">
+    <!-- Productos Más Vendidos -->
+    <mat-card class="products-section">
+      <mat-card-content>
+        <h3 class="section-title">{{ 'REPORTS.TOP_PRODUCTS' | translate }}</h3>
+        <mat-list>
+          <mat-list-item *ngFor="let product of dashboardData.topProducts">
+            <span matListItemTitle>{{ product.name }}</span>
+            <span matListItemMeta class="product-sales">{{ product.sales }}</span>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Productos Menos Vendidos -->
+    <mat-card class="products-section">
+      <mat-card-content>
+        <h3 class="section-title">{{ 'REPORTS.LOW_PRODUCTS' | translate }}</h3>
+        <mat-list>
+          <mat-list-item *ngFor="let product of dashboardData.lowProducts">
+            <span matListItemTitle>{{ product.name }}</span>
+            <span matListItemMeta class="product-sales">{{ product.sales }}</span>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Inventario General -->
+  <mat-card class="inventory-section">
+    <mat-card-content>
+      <h3 class="section-title">{{ 'REPORTS.GENERAL_INVENTORY' | translate }}</h3>
+      <div class="inventory-count">{{ dashboardData.totalInventory }}</div>
+      <div class="inventory-label">{{ 'REPORTS.PRODUCTS' | translate }}</div>
+      <button mat-raised-button color="primary" class="download-btn" (click)="downloadPDF()">
+        <mat-icon>download</mat-icon>
+        {{ 'REPORTS.DOWNLOAD_PDF' | translate }}
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>
