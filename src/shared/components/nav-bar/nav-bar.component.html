@@ -1,0 +1,34 @@
+<mat-toolbar>
+  <div class="start">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <a href=""><img class="logo" src="https://avatars.githubusercontent.com/u/208889289?s=48&v=4"></a>
+    <span><strong><a href="">St0ckHunters</a></strong></span>
+    <span class="example-spacer"></span>
+  </div>
+  <div class="mid">
+
+    <span class="options">
+      <button matIconButton class="example-icon" aria-label="Example icon-button with share icon">
+        <a routerLink="/signup"><strong>{{'Nav-bar.Clients' | translate}}</strong></a>
+      </button>
+
+      <button matIconButton class="example-icon" aria-label="Example icon-button with share icon">
+        <a routerLink="/login"><strong>{{ 'Nav-bar.Products' | translate }}</strong></a>
+      </button>
+
+      <button matIconButton class="example-icon" aria-label="Example icon-button with share icon">
+        <a routerLink="/login"><strong>{{ 'Nav-bar.Sales' | translate }}</strong></a>
+      </button>
+
+      <button matIconButton class="example-icon" aria-label="Example icon-button with share icon">
+        <a routerLink="/login"><strong>{{ 'Nav-bar.Reports' | translate }}</strong></a>
+      </button>
+
+
+
+    </span>
+  </div>
+  <div class="end">
+    <app-language-button></app-language-button>
+  </div>
+</mat-toolbar>

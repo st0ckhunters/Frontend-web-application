@@ -4,6 +4,8 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { ComponentsProductsComponent } from '../../components/components-products/components-products.component';
 import { ProductsService } from '../../services/products.service';
 import { Product } from '../../models/products';
+import {HeaderComponent} from '../../../shared/components/header/header.component';
+import {NavBarComponent} from '../../../shared/components/nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-products-view',
@@ -11,7 +13,9 @@ import { Product } from '../../models/products';
   imports: [
     CommonModule,
     TranslatePipe,
-    ComponentsProductsComponent
+    ComponentsProductsComponent,
+    HeaderComponent,
+    NavBarComponent
   ],
   templateUrl: './products-view.component.html',
   styleUrl: './products-view.component.css'

@@ -73,6 +73,13 @@
 
   "Account": {
     "Welcome": "Welcome"
+  },
+
+  "Nav-bar": {
+    "Clients": "Clients",
+    "Products": "Products",
+    "Sales" : "Sales",
+    "Reports" : "Reports"
   }
 }
 
