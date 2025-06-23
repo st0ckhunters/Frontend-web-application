@@ -9,6 +9,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { CurrencyPipe } from '@angular/common';
 import { Report } from '../../models/reports';
 import { Chart, ChartConfiguration, registerables } from 'chart.js';
+import {NavBarComponent} from '../../../shared/components/nav-bar/nav-bar.component';
 
 //registrar chart components
 Chart.register(...registerables);
@@ -24,7 +25,8 @@ Chart.register(...registerables);
     MatTableModule,
     MatIconModule,
     TranslatePipe,
-    CurrencyPipe
+    CurrencyPipe,
+    NavBarComponent
   ],
   templateUrl: './item-reports.component.html',
   styleUrl: './item-reports.component.css',
