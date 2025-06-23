@@ -6,6 +6,8 @@ import {ItemUsersComponent} from '../auth/components/item-users/item-users.compo
 import {AccountViewComponent} from '../auth/views/account-view/account-view.component';
 import {ProductsViewComponent} from '../auth/views/products-view/products-view.component';
 import {ClientsViewsComponent} from '../auth/views/clients-views/clients-views.component';
+import {SalesViewComponent} from '../auth/views/sales-view/sales-view.component';
+import {ItemReportsComponent} from '../auth/components/item-reports/item-reports.component';
 
 
 
@@ -17,10 +19,12 @@ export const routes: Routes = [
   { path: 'accounts', component: AccountViewComponent},
   { path: 'products', component: ProductsViewComponent },
   {path: 'clients', component: ClientsViewsComponent },
+  {path:'sales', component: SalesViewComponent },
+  {path:'reports', component: ItemReportsComponent },
   { path: 'not-found', component: NotFoundComponent },
   { path: '**', redirectTo: 'not-found' },
-  {path:'reports', component: NotFoundComponent },
-  {path:'sales', component: NotFoundComponent },
+
+
   {path:'Customers', component: NotFoundComponent },
 
 

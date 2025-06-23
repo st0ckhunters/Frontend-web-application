@@ -1,0 +1,38 @@
+<app-nav-bar></app-nav-bar>
+<div class="boomerang-container">
+  <h2>Sales</h2>
+  <div class="controls">
+    <input type="text" [(ngModel)]="searchTerm" (input)="onSearch()" placeholder="Buscar..." class="search-input" />
+    <button (click)="addSale()" class="add-button">Agregar</button>
+  </div>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Fecha</th>
+      <th>Producto</th>
+      <th>Lote</th>
+      <th>Cantidad</th>
+      <th>Estado</th>
+      <th>Cliente</th>
+      <th>Usuario</th>
+      <th>Ubicación</th>
+      <th>Creado</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let sale of sales">
+      <td>{{ sale.id }}</td>
+      <td>{{ sale.sale_date }}</td>
+      <td>{{ sale.product_id }}</td>
+      <td>{{ sale.lot_id }}</td>
+      <td>{{ sale.quantity }}</td>
+      <td>{{ sale.status }}</td>
+      <td>{{ sale.customer_id }}</td>
+      <td>{{ sale.user_id }}</td>
+      <td>{{ sale.location_id }}</td>
+      <td>{{ sale.created_at }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

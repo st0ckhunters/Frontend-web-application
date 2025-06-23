@@ -1,26 +1,42 @@
-/* src/app/auth/views/products-view/products-view.component.css */
 .tittle {
   text-align: center;
   color: var(--color-white);
 }
 
-/* Ajustamos el tamaño de la imagen si la usas */
-.imgProfile {
-  display: flex;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  margin: 50px auto;
-  position: relative;
-  border: 3px solid var(--color-gray-200);
-  border-radius: 100px;
-  background-color: var(--color-gray-100);
+.cards {
+  padding: 20px;
 }
 
-.cards {
-  display: flex;
-  gap: 50px;
-  margin: 70px auto;
-  justify-content: space-evenly;
-  flex-wrap: wrap; /* Añadimos esto pa’ que sea responsivo */
+.add-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #00d4ff;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #333;
+  border-radius: 8px;
+}
+
+.form-container input {
+  display: block;
+  margin: 10px 0;
+  padding: 5px;
+  width: 200px;
+}
+
+.form-container button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: #00d4ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
