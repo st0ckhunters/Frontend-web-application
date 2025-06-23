@@ -6,10 +6,11 @@ import {FormsModule} from '@angular/forms';
 import {NgForOf} from '@angular/common';
 import {HeaderComponent} from '../../../shared/components/header/header.component';
 import {NavBarComponent} from '../../../shared/components/nav-bar/nav-bar.component';
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-clients-views',
-  imports: [MatCard, FormsModule, NgForOf, HeaderComponent, NavBarComponent],
+  imports: [MatCard, FormsModule, NgForOf, HeaderComponent, NavBarComponent, RouterLink],
   templateUrl: './clients-views.component.html',
   styleUrl: './clients-views.component.css'
 })

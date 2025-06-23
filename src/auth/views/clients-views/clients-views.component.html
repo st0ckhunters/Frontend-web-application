@@ -3,10 +3,11 @@
 <hr />
 
 <div class="client-list">
-  <div *ngFor="let client of clients" class="client-card">
+  <mat-card *ngFor="let client of clients" class="client-card">
     <strong>{{ client.first_name }}</strong><br>
-    <button>Ver más</button>
-  </div>
+    <button routerLink="/detalles">Ver más</button>
+  </mat-card>
+
 </div>
 
 <h3>Añadir información del Cliente</h3>
