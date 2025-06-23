@@ -13,10 +13,17 @@
 
 <form (ngSubmit)="addClient()">
   <label>
-    Nombre del Cliente *
+    Nombre del Cliente
     <input type="text" [(ngModel)]="newclient.first_name" name="first name" required />
-    <input type="text" [(ngModel)]="newclient.last_name" name="last name" required />
+
+
   </label>
+
+    <label>
+    Apellido del Cliente
+    <input type="text" [(ngModel)]="newclient.last_name" name="last name" required />
+    </label>
+
   <label>
     Compañia del Cliente *
     <input type="text" [(ngModel)]="newclient.company" name="company" required />
