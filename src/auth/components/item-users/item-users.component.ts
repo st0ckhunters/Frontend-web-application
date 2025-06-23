@@ -8,13 +8,14 @@ import {MatListModule} from '@angular/material/list';
 import { User } from '../../models/users';
 import {TranslatePipe} from '@ngx-translate/core';
 import {DatePipe, NgIf} from '@angular/common';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-item-users',
   standalone: true,
   imports: [MatCardModule, MatButtonModule,
 
-    MatToolbarModule, MatListModule, TranslatePipe, DatePipe, NgIf],
+    MatToolbarModule, MatListModule, TranslatePipe, DatePipe, NgIf, RouterLink],
   templateUrl: './item-users.component.html',
   styleUrl: './item-users.component.css'
 })

@@ -12,5 +12,15 @@ export class ProductsService {
   getAllProducts(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
+
+  addProduct(product: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl, product);
+  }
+
+  deleteProduct(id: string): Observable<any> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.delete<any>(url);
+  }
 }
+
 

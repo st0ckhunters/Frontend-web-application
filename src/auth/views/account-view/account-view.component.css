@@ -1,10 +1,10 @@
-.tittle{
+.tittle {
   text-align: center;
-  color: var(--color-white)
+  color: var(--color-white);
 }
 
 /*check after the size of the image*/
-.imgProfile{
+.imgProfile {
   display: flex;
   align-items: center;
   width: 100px;
@@ -15,10 +15,13 @@
   border-radius: 100px;
   background-color: var(--color-gray-100);
 }
-.cards{
-  display: flex;
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
   gap: 50px;
   margin: 70px auto;
-  justify-content: space-evenly;
-
+  justify-content: center;
+  max-width: 1200px; /* Opcional: limita el ancho total */
+  padding: 0 20px; /* Espaciado lateral */
 }

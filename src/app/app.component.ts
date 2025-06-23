@@ -20,12 +20,13 @@ import {ClientsViewsComponent} from '../auth/views/clients-views/clients-views.c
 //import {NavBarComponent} from '../shared/components/nav-bar/nav-bar.component';
 import {PlannerViewComponent} from '../auth/views/planner-view/planner-view.component';
 import {ComponentsProductsComponent} from '../auth/components/components-products/components-products.component';
+import {ItemReportsComponent} from '../auth/components/item-reports/item-reports.component';
 
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, FooterComponent, MatButtonToggleModule, MatToolbarModule, MatButtonModule, MatIconModule,
-    MatSlideToggleModule, HeaderComponent, SignUpViewComponent, LogInViewComponent,PlannerViewComponent, ComponentsProductsComponent, ClientsViewsComponent],
+    MatSlideToggleModule, HeaderComponent, SignUpViewComponent, LogInViewComponent, PlannerViewComponent, ComponentsProductsComponent, ClientsViewsComponent, ItemReportsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TranslatePipe } from '@ngx-translate/core';
 import {Router} from '@angular/router';
+import {HeaderComponent} from '../../../shared/components/header/header.component';
 
 @Component({
   selector: 'app-sign-up-view',
   standalone: true,
   imports: [
     ReactiveFormsModule,
-    TranslatePipe
+    TranslatePipe,
+    HeaderComponent
   ],
   templateUrl: './sign-up-view.component.html',
   styleUrl: './sign-up-view.component.css'

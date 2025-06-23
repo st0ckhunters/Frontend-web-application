@@ -1,5 +1,8 @@
-<!-- src/app/auth/views/products-view/products-view.component.html -->
+
+<app-nav-bar></app-nav-bar>
+
+
+<h2 class="tittle">{{ 'Products' | translate }} </h2>
 <div class="cards">
-  <h2 class="tittle">{{ 'Products.Welcome' | translate }} [Tienda]</h2>
-  <app-components-products *ngFor="let product of productinfo" [productinfo]="productinfo"></app-components-products>
+  <app-components-products [productinfo]="productinfo"></app-components-products>
 </div>
