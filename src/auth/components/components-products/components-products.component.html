@@ -7,9 +7,12 @@
     <button (click)="addProduct()">Guardar</button>
     <button (click)="showForm = false">Cancelar</button>
   </div>
+
+
   <div class="products-grid">
     <div class="product-card" *ngFor="let product of productinfo">
-      <img [src]="product.image_url" alt="{{ product.name }}" class="product-image">
+
+      <img [src]="product.image_url" alt="image not found" class="product-image">
       <h3 class="product-name">{{ product.name }}</h3>
       <p class="product-category">Categoría: {{ product.category_id }}</p>
       <p class="product-date">Creado: {{ product.created_at | date:'medium' }}</p>

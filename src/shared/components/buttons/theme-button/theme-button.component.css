@@ -1,0 +1,6 @@
+img{
+  width: 20px;
+}
+mat-button-toggle-group{
+  background-color: var(--color-gray-100);
+}
