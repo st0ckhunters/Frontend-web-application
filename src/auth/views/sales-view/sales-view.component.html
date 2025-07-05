@@ -1,29 +1,49 @@
 <app-nav-bar></app-nav-bar>
-<div class="boomerang-container">
-  <h2>Sales</h2>
-  <div class="controls">
-    <input type="text" [(ngModel)]="searchTerm" (input)="onSearch()" placeholder="Buscar..." class="search-input" />
-    <button (click)="addSale()" class="add-button">Agregar</button>
+<div class="sales-container">
+  <h2>{{ 'Sales' | translate }}</h2>
+  <div class="search-controls">
+    <input type="text" [(ngModel)]="searchTerm" (input)="onSearch()" placeholder="{{ 'Search' | translate }}" class="search-input" />
   </div>
+
+  <div *ngIf="showForm" class="form-container">
+    <h3>{{ editSale ? ('Edit Sale' | translate) : ('New Sale' | translate) }}</h3>
+    <div class="form-group">
+      <input type="date" [(ngModel)]="newSale.sale_date" required />
+      <input [(ngModel)]="newSale.product_id" placeholder="{{ 'Product ID' | translate }}" required />
+      <input [(ngModel)]="newSale.lot_id" placeholder="{{ 'Lot ID' | translate }}" />
+      <input type="number" [(ngModel)]="newSale.quantity" placeholder="{{ 'Quantity' | translate }}" required min="1" />
+      <input [(ngModel)]="newSale.status" placeholder="{{ 'Status' | translate }}" required />
+      <input [(ngModel)]="newSale.customer_id" placeholder="{{ 'Customer ID' | translate }}" required />
+      <input [(ngModel)]="newSale.user_id" placeholder="{{ 'User ID' | translate }}" />
+      <input [(ngModel)]="newSale.location_id" placeholder="{{ 'Location ID' | translate }}" />
+      <p class="error-message" *ngIf="errorMessage">{{ errorMessage | translate }}</p>
+      <div class="form-buttons">
+        <button (click)="editSale ? updateSale() : addSale()">{{ editSale ? ('Save Changes' | translate) : ('Save' | translate) }}</button>
+        <button (click)="toggleForm()" class="cancel-button">{{ 'Cancel' | translate }}</button>
+      </div>
+    </div>
+  </div>
+
   <table>
     <thead>
     <tr>
-      <th>ID</th>
-      <th>Fecha</th>
-      <th>Producto</th>
-      <th>Lote</th>
-      <th>Cantidad</th>
-      <th>Estado</th>
-      <th>Cliente</th>
-      <th>Usuario</th>
-      <th>Ubicación</th>
-      <th>Creado</th>
+      <th>{{ 'ID' | translate }}</th>
+      <th>{{ 'Sale Date' | translate }}</th>
+      <th>{{ 'Product' | translate }}</th>
+      <th>{{ 'Lot' | translate }}</th>
+      <th>{{ 'Quantity' | translate }}</th>
+      <th>{{ 'Status' | translate }}</th>
+      <th>{{ 'Customer' | translate }}</th>
+      <th>{{ 'User' | translate }}</th>
+      <th>{{ 'Location' | translate }}</th>
+      <th>{{ 'Created' | translate }}</th>
+      <th>{{ 'Actions' | translate }}</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let sale of sales">
+    <tr *ngFor="let sale of filteredSales">
       <td>{{ sale.id }}</td>
-      <td>{{ sale.sale_date }}</td>
+      <td>{{ sale.sale_date | date:'medium' }}</td>
       <td>{{ sale.product_id }}</td>
       <td>{{ sale.lot_id }}</td>
       <td>{{ sale.quantity }}</td>
@@ -31,8 +51,16 @@
       <td>{{ sale.customer_id }}</td>
       <td>{{ sale.user_id }}</td>
       <td>{{ sale.location_id }}</td>
-      <td>{{ sale.created_at }}</td>
+      <td>{{ sale.created_at | date:'medium' }}</td>
+      <td>
+        <button (click)="editSaleForm(sale)" class="edit-button">{{ 'Edit' | translate }}</button>
+        <button (click)="deleteSale(sale.id)" class="delete-button">{{ 'Delete' | translate }}</button>
+      </td>
     </tr>
     </tbody>
   </table>
+  <div class="add-button-container">
+    <button (click)="toggleForm()" class="add-button">{{ 'Add Sale' | translate }}</button>
+  </div>
+  <p *ngIf="filteredSales.length === 0">{{ 'No sales found' | translate }}</p>
 </div>

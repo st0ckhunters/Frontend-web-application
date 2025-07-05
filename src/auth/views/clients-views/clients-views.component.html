@@ -3,23 +3,47 @@
 <hr />
 
 <div class="client-list">
-  <div *ngFor="let client of clients" class="client-card">
-    <strong>{{ client.first_name }}</strong><br>
-    <button>Ver más</button>
-  </div>
+  <mat-card *ngFor="let client of clients" class="client-card">
+    <strong>{{ client.first_name }} {{ client.last_name }}</strong><br>
+    <p>Company: {{ client.company }}</p>
+    <p *ngIf="client.phone">Phone: {{ client.phone }}</p>
+    <p *ngIf="client.email">Email: {{ client.email }}</p>
+    <p *ngIf="client.dni">DNI: {{ client.dni }}</p>
+    <p *ngIf="client.status">Status: {{ client.status }}</p>
+    <p *ngIf="client.registration_date">Registered: {{ client.registration_date | date:'short' }}</p>
+    <p *ngIf="client.created_at">Created: {{ client.created_at | date:'short' }}</p>
+    <button [routerLink]="['/detalles', client.id]">Ver más</button>
+  </mat-card>
 </div>
 
-<h3>Añadir información del Cliente</h3>
+<h3><strong>Añadir información del Cliente</strong></h3>
 
-<form (ngSubmit)="addClient()">
+<form (ngSubmit)="addClient()" #clientForm="ngForm">
   <label>
-    Nombre del Cliente *
-    <input type="text" [(ngModel)]="newclient.first_name" name="first name" required />
-    <input type="text" [(ngModel)]="newclient.last_name" name="last name" required />
+    Nombre y apellido del cliente *
+    <input type="text" [(ngModel)]="newclient.first_name" name="first_name" required />
   </label>
+
   <label>
-    Compañia del Cliente *
+    Compañía del Cliente *
     <input type="text" [(ngModel)]="newclient.company" name="company" required />
   </label>
-  <button type="submit">Añadir</button>
+
+  <label>
+    Teléfono
+    <input type="tel" [(ngModel)]="newclient.phone" name="phone" />
+  </label>
+
+  <label>
+    Email
+    <input type="email" [(ngModel)]="newclient.email" name="email" />
+  </label>
+
+  <label>
+    DNI
+    <input type="text" [(ngModel)]="newclient.dni" name="dni" />
+  </label>
+
+
+  <button class="subm" type="submit" [disabled]="!clientForm.valid">Añadir</button>
 </form>

@@ -9,6 +9,8 @@ import {ClientsViewsComponent} from '../auth/views/clients-views/clients-views.c
 import {SalesViewComponent} from '../auth/views/sales-view/sales-view.component';
 import {ItemReportsComponent} from '../auth/components/item-reports/item-reports.component';
 
+
+
 export const routes: Routes = [
   { path: '', component: LogInViewComponent },
   { path: 'login', component: LogInViewComponent },

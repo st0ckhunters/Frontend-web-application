@@ -1,21 +1,31 @@
 <div class="products-container">
-  <button (click)="showForm = !showForm" class="add-button">Añadir Producto</button>
+  <button (click)="toggleForm()" class="add-button">{{ editProduct ? ('Edit Product' | translate) : ('Add Product' | translate) }}</button>
   <div *ngIf="showForm" class="form-container">
-    <input [(ngModel)]="newProduct.name" placeholder="Nombre" />
-    <input [(ngModel)]="newProduct.category_id" placeholder="Categoría ID" />
-    <input [(ngModel)]="newProduct.image_url" placeholder="URL de imagen" />
-    <button (click)="addProduct()">Guardar</button>
-    <button (click)="showForm = false">Cancelar</button>
-  </div>
-  <div class="products-grid">
-    <div class="product-card" *ngFor="let product of productinfo">
-      <img [src]="product.image_url" alt="{{ product.name }}" class="product-image">
-      <h3 class="product-name">{{ product.name }}</h3>
-      <p class="product-category">Categoría: {{ product.category_id }}</p>
-      <p class="product-date">Creado: {{ product.created_at | date:'medium' }}</p>
-      <p class="product-date">Actualizado: {{ product.updated_at | date:'medium' }}</p>
-      <button (click)="deleteProduct(product.id)" class="delete-button">Eliminar</button>
+    <h3>{{ editProduct ? ('Edit Product' | translate) : ('New Product' | translate) }}</h3>
+    <div class="form-group">
+      <input [(ngModel)]="newProduct.name" placeholder="{{ 'Product Name' | translate }}" required />
+      <input [(ngModel)]="newProduct.category_id" placeholder="{{ 'Category ID' | translate }}" required />
+      <input [(ngModel)]="newProduct.image_url" placeholder="{{ 'Image URL' | translate }}" />
+      <p class="error-message" *ngIf="errorMessage">{{ errorMessage | translate }}</p>
+      <div class="form-buttons">
+        <button (click)="editProduct ? updateProduct() : addProduct()">{{ editProduct ? ('Save Changes' | translate) : ('Save' | translate) }}</button>
+        <button (click)="toggleForm()" class="cancel-button">{{ 'Cancel' | translate }}</button>
+      </div>
     </div>
   </div>
-  <p *ngIf="productinfo.length === 0">Cargando productos...</p>
+
+  <div class="products-grid">
+    <div class="product-card" *ngFor="let product of productinfo">
+      <img [src]="product.image_url || 'assets/placeholder.png'" alt="{{ 'Image not found' | translate }}" class="product-image">
+      <h3 class="product-name">{{ product.name }}</h3>
+      <p class="product-category">{{ 'Category' | translate }}: {{ product.category_id }}</p>
+      <p class="product-date">{{ 'Created' | translate }}: {{ product.created_at | date:'medium' }}</p>
+      <p class="product-date">{{ 'Updated' | translate }}: {{ product.updated_at | date:'medium' }}</p>
+      <div class="product-buttons">
+        <button (click)="editProductForm(product)" class="edit-button">{{ 'Edit' | translate }}</button>
+        <button (click)="deleteProduct(product.id)" class="delete-button">{{ 'Delete' | translate }}</button>
+      </div>
+    </div>
+  </div>
+  <p *ngIf="productinfo.length === 0">{{ 'Loading products' | translate }}...</p>
 </div>

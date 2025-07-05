@@ -67,13 +67,19 @@
     "Review": "Resumen"
   },
 
+  "AccountView": {
+    "Email": "Correo",
+    "Role": "Rol",
+    "CreatedAt": "Creado en"
+  },
+
   "NotFoundMessage": {
     "msgnf": "¡Ups! La página que estás buscando no existe.",
     "Return": "Regresar"
   },
 
   "Account": {
-    "Welcome": "Bienvenido"
+    "Welcome": "Bienvenido, seleccione un administrador"
   },
   "Nav-bar": {
     "Clients": "Clientes",
@@ -81,5 +87,9 @@
     "Sales" : "Ventas",
     "Reports" : "Reportes"
   },
-  "Products": "Productos"
+  "Products": "Productos",
+
+  "Reports" : "Reportes",
+  "Daily": "Ventas del día"
+
 }
