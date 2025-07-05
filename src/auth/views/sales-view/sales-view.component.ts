@@ -4,7 +4,7 @@ import {DatePipe, NgForOf, NgIf} from '@angular/common';
 import { SalesService } from '../../services/sales.service';
 import { Sale } from '../../models/sales';
 import { NavBarComponent } from '../../../shared/components/nav-bar/nav-bar.component';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sales-view',
@@ -12,8 +12,9 @@ import { TranslatePipe } from '@ngx-translate/core';
   imports: [
     FormsModule,
     NgForOf,
+    NgIf,
     NavBarComponent,
-    TranslatePipe,
+    TranslateModule,
     DatePipe
   ],
   templateUrl: './sales-view.component.html',

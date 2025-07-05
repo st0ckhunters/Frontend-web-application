@@ -1,6 +1,6 @@
 .sales-container {
   max-width: 1200px;
-  margin: 30px auto 10px ;
+  margin: 20px auto;
   padding: 20px;
   background-color: #f8f9fa;
   border-radius: 8px;
@@ -9,14 +9,14 @@
 
 h2 {
   font-size: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: center;
   color: #343a40;
 }
 
-.controls {
+.search-controls {
   display: flex;
-  gap: 10px;
+  justify-content: center;
   margin-bottom: 20px;
 }
 
@@ -25,7 +25,14 @@ h2 {
   border: 1px solid #ced4da;
   border-radius: 4px;
   font-size: 16px;
-  flex-grow: 1;
+  width: 100%;
+  max-width: 400px;
+}
+
+.add-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .add-button, .edit-button, .delete-button, .cancel-button {
@@ -109,7 +116,7 @@ h2 {
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #d1cccc;
+  background-color: #ffffff;
 }
 
 th, td {
