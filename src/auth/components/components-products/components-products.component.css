@@ -99,4 +99,9 @@ button{
   border-radius: 4px;
   cursor: pointer;
 }
-
+.edit-button{
+  border-radius: 5px;
+  border-color: transparent;
+  cursor: copy;
+  background-color: #aaa3a3;
+}

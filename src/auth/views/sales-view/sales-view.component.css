@@ -1,15 +1,17 @@
 .sales-container {
-  background-color: #a3a3a8;
-  color: #fff;
+  max-width: 1200px;
+  margin: 30px auto 10px ;
   padding: 20px;
+  background-color: #f8f9fa;
   border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-  color: #fff;
-  font-size:  30px;
+  font-size: 30px;
   margin-bottom: 20px;
   text-align: center;
+  color: #343a40;
 }
 
 .controls {
@@ -20,41 +22,111 @@ h2 {
 
 .search-input {
   padding: 10px;
-  border: none;
+  border: 1px solid #ced4da;
   border-radius: 4px;
-  background-color: #ffffff;
-  color: #000000;
+  font-size: 16px;
   flex-grow: 1;
 }
 
-.add-button {
-  padding: 5px 10px;
-  background-color: #00d4ff;
+.add-button, .edit-button, .delete-button, .cancel-button {
+  padding: 8px 16px;
   border: none;
   border-radius: 4px;
-  color: #fff;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.add-button:hover {
+  background-color: #218838;
+}
+
+.edit-button {
+  margin-left: 5px;
+  background-color: #007bff;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  margin-top: 10px;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.cancel-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #5a6268;
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group input {
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 14px;
+  margin: 10px 0;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+  background-color: #d1cccc;
 }
 
 th, td {
-  padding: 10px;
+  padding: 12px;
   text-align: left;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #dee2e6;
 }
 
 th {
-  background-color: #b7b7ed;
+  background-color: #007bff;
+  color: white;
 }
 
-tr {
-  background-color: #93a9f3;
+tr:nth-child(even) {
+  background-color: #f8f9fa;
 }
 
 tr:hover {
-  background-color: #7b7b81;
+  background-color: #e9ecef;
 }
