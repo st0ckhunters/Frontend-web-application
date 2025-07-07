@@ -3,15 +3,17 @@ import { MatCardModule } from '@angular/material/card';
 import { Clients } from '../../models/clients';
 import { ClientsService } from '../../services/clients.service';
 import { FormsModule } from '@angular/forms';
-import {DatePipe, NgForOf, NgIf} from '@angular/common';
+import { DatePipe, NgForOf, NgIf } from '@angular/common';
 import { HeaderComponent } from '../../../shared/components/header/header.component';
 import { NavBarComponent } from '../../../shared/components/nav-bar/nav-bar.component';
 import { RouterLink } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { ClientDetailModalComponent} from '../../../shared/components/modal/client-detail-modal/client-detail-modal.component';
 
 @Component({
   selector: 'app-clients-views',
   standalone: true,
-  imports: [MatCardModule, FormsModule, NgForOf, HeaderComponent, NavBarComponent, RouterLink, DatePipe, NgIf],
+  imports: [MatCardModule, FormsModule, NgForOf, NavBarComponent, RouterLink, DatePipe, NgIf],
   templateUrl: './clients-views.component.html',
   styleUrls: ['./clients-views.component.css']
 })
@@ -29,7 +31,7 @@ export class ClientsViewsComponent implements OnInit {
     created_at: undefined
   };
 
-  constructor(private clientsService: ClientsService) {}
+  constructor(private clientsService: ClientsService, private dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.clientsService.getAllclients().subscribe({
@@ -66,6 +68,13 @@ export class ClientsViewsComponent implements OnInit {
       error: (err) => {
         console.error('Error al crear cliente:', err);
       }
+    });
+  }
+
+  openClientDetails(client: Clients): void {
+    this.dialog.open(ClientDetailModalComponent, {
+      width: '600px',
+      data: client
     });
   }
 }
