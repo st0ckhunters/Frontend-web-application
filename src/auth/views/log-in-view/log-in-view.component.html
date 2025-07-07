@@ -12,7 +12,7 @@
           <img src="https://cdn-icons-png.flaticon.com/128/11195/11195330.png" alt="user" width="20px">
         </div>
         <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="error">
-          <p>{{'CorrReq'|translate}}</p>
+          <p>{{'LoginAuth.CorrReq'|translate}}</p>
         </div>
       </div>
       <div class="form-group">
@@ -22,7 +22,7 @@
           <img src="https://cdn-icons-png.flaticon.com/128/4837/4837031.png" alt="lock" width="20px">
         </div>
         <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="error">
-          <p>{{'ConReq'|translate}}</p>
+          <p>{{'LoginAuth.ConReq'|translate}}</p>
         </div>
       </div>
       <button type="submit" [disabled]="loginForm.invalid">{{ 'LoginView.Enter' | translate }}</button>

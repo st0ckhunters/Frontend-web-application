@@ -10,12 +10,21 @@
     "Login": "Ingresar"
   },
   "LoginView": {
+
     "Login": "Ingresar",
     "Email Address": "Correo Electrónico",
     "Password": "Contraseña",
     "Enter": "Ingresar"
   },
 
+  "AccountView": {
+    "FirstName": "Nombre",
+    "LastName": "Apellido",
+    "Email": "Correo",
+    "Role": "Rol",
+    "CreatedAt": "Creado en",
+    "Organization_id": "Id de Organización"
+  },
 
   "SignupView": {
     "Register": "Registrarse",
@@ -67,11 +76,7 @@
     "Review": "Resumen"
   },
 
-  "AccountView": {
-    "Email": "Correo",
-    "Role": "Rol",
-    "CreatedAt": "Creado en"
-  },
+
 
   "NotFoundMessage": {
     "msgnf": "¡Ups! La página que estás buscando no existe.",
@@ -98,6 +103,16 @@
     "Logout": "Cerrar sesión",
     "Configure": "Ajustes"
   },
+  "LoginAuth":{
   "ConReq": "Contraseña requerida",
   "CorrReq": "Correo invalido"
+  },
+
+  "SignUpAuth": {
+    "NameReq": "El nombre es obligatorio",
+    "LastNameReq": "El apellido es obligatorio",
+    "EmailReq": "El correo es obligatorio",
+    "CorrInvalid": "Correo inválido",
+    "ContraseñaReq": "Contraseña requerida"
+  }
 }
