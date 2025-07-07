@@ -5,34 +5,71 @@
   width: 100%;
   text-align: center;
   background-color: #353d46;
-  padding: 5px;
+  padding: 15px;
 }
-p{
-  color: var(--color-gray-200)
-}
-h4{
-  align-items: center;
-  color: var(--color-gray-200)
 
-
+p {
+  color: var(--color-gray-200);
+  margin: 10px 0;
 }
+
+h4 {
+  color: var(--color-gray-200);
+  margin: 10px 0;
+}
+
 .networks a {
   color: var(--color-gray-100);
   font-size: 24px;
   transition: color 0.3s ease;
   text-decoration: none;
-  justify-content: space-evenly;
 }
 
 .networks a:hover {
   color: #2391d8;
 }
-.social-list {
 
+.social-list {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 80px;
+  gap: 50px;
   margin: 0;
+  padding: 0;
 }
 
+/* Media Queries para Responsividad */
+
+/* Móviles (<768px) */
+@media (max-width: 767px) {
+  .footer {
+    padding: 10px;
+  }
+
+  .social-list {
+    gap: 20px; /* Menor espacio entre íconos sociales */
+  }
+
+  .networks a {
+    font-size: 18px; /* Íconos más pequeños */
+  }
+
+  p, h4 {
+    font-size: 14px; /* Texto más pequeño en móviles */
+  }
+}
+
+/* Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .social-list {
+    gap: 30px; /* Espacio intermedio */
+  }
+
+  .networks a {
+    font-size: 20px; /* Tamaño intermedio para íconos */
+  }
+
+  p, h4 {
+    font-size: 16px;
+  }
+}

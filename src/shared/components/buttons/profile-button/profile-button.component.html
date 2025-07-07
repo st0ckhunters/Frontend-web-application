@@ -1,0 +1,13 @@
+<mat-icon-button class="profile-icon" [matMenuTriggerFor]="profileMenu" aria-label="Profile menu">
+  <div class="profile-image"></div>
+</mat-icon-button>
+<mat-menu #profileMenu="matMenu">
+  <button mat-menu-item (click)="openConfig()">
+    <mat-icon><div class="configure-image"></div></mat-icon>
+    <span>{{ 'Profile.Configure' | translate }}</span>
+  </button>
+  <button mat-menu-item (click)="logout()">
+    <mat-icon><mat-icon><div class="exit-image"></div></mat-icon></mat-icon>
+    <span>{{ 'Profile.Logout' | translate }}</span>
+  </button>
+</mat-menu>

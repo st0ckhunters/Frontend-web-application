@@ -15,12 +15,18 @@
   border-radius: 100px;
   background-color: var(--color-gray-100);
 }
+h2{
+  font-size:  30px;
+  margin-top: 80px;
+}
 
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
   gap: 50px;
-  margin: 70px auto;
+  /*margin: 70px auto;*/
+  margin-left: auto;
+  margin-right: auto;
   justify-content: center;
   max-width: 1200px; /* Opcional: limita el ancho total */
   padding: 0 20px; /* Espaciado lateral */

@@ -1,61 +1,114 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { DatePipe, NgForOf, NgIf } from '@angular/common';
 import { Product } from '../../models/products';
 import { ProductsService } from '../../services/products.service';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-components-products',
   standalone: true,
   imports: [
-    TranslatePipe,
     NgForOf,
     NgIf,
     DatePipe,
-    FormsModule
+    FormsModule,
+    TranslatePipe
   ],
   templateUrl: './components-products.component.html',
-  styleUrl: './components-products.component.css'
+  styleUrls: ['./components-products.component.css']
 })
 export class ComponentsProductsComponent implements OnInit {
-  @Input() productinfo!: Product[];
+  @Input() productinfo: Product[] = [];
+  @ViewChild('productsContainer') productsContainer!: ElementRef;
   newProduct: Product = { id: '', name: '', image_url: '', category_id: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString() };
+  editProduct: Product | null = null;
   showForm: boolean = false;
+  errorMessage: string = '';
 
   constructor(private productsService: ProductsService) {}
 
   ngOnInit(): void {
-    // No necesitamos recargar aquí, ya lo hace el padre
+    // La carga de productos se maneja en el padre (ProductsViewComponent)
+  }
+
+  toggleForm(): void {
+    this.showForm = !this.showForm;
+    this.editProduct = null; // Resetea el formulario de edición
+    this.newProduct = { id: '', name: '', image_url: '', category_id: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString() };
+    this.errorMessage = '';
   }
 
   addProduct(): void {
-    if (this.newProduct.name && this.newProduct.category_id) {
-      this.productsService.addProduct(this.newProduct).subscribe({
-        next: (response) => {
-          this.productinfo = [...this.productinfo, response]; // Actualiza la lista local
-          this.newProduct = { id: '', name: '', image_url: '', category_id: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString() };
-          this.showForm = false;
-          console.log('Producto añadido:', response);
-        },
-        error: (err) => {
-          console.error('Error al añadir producto:', err);
-        }
-      });
+    if (!this.newProduct.name || !this.newProduct.category_id) {
+      this.errorMessage = 'El nombre y la categoría son obligatorios';
+      return;
     }
+
+    this.productsService.addProduct(this.newProduct).subscribe({
+      next: (response) => {
+        this.productinfo = [...this.productinfo, response];
+        this.toggleForm();
+        console.log('Producto añadido:', response);
+      },
+      error: (err) => {
+        this.errorMessage = 'Error al añadir producto: ' + err.message;
+        console.error('Error al añadir producto:', err);
+      }
+    });
+  }
+
+  onEditClick(product: Product): void {
+    this.editProductForm(product);
+    this.scrollToTop();
+  }
+
+  editProductForm(product: Product): void {
+    this.editProduct = { ...product };
+    this.showForm = true;
+    this.newProduct = { ...product }; // Carga los datos en el formulario
+    this.errorMessage = '';
+  }
+
+  updateProduct(): void {
+    if (!this.editProduct || !this.newProduct.name || !this.newProduct.category_id) {
+      this.errorMessage = 'El nombre y la categoría son obligatorios';
+      return;
+    }
+
+    this.productsService.updateProduct(this.editProduct.id, this.newProduct).subscribe({
+      next: (response) => {
+        this.productinfo = this.productinfo.map(p => p.id === response.id ? response : p);
+        this.toggleForm();
+        console.log('Producto actualizado:', response);
+      },
+      error: (err) => {
+        this.errorMessage = 'Error al actualizar producto: ' + err.message;
+        console.error('Error al actualizar producto:', err);
+      }
+    });
   }
 
   deleteProduct(id: string): void {
     if (confirm('¿Estás seguro de eliminar este producto?')) {
       this.productsService.deleteProduct(id).subscribe({
         next: () => {
-          this.productinfo = this.productinfo.filter(product => product.id !== id); // Actualiza la lista local
+          this.productinfo = this.productinfo.filter(product => product.id !== id);
           console.log('Producto eliminado:', id);
         },
         error: (err) => {
+          this.errorMessage = 'Error al eliminar producto: ' + err.message;
           console.error('Error al eliminar producto:', err);
         }
       });
+    }
+  }
+
+  scrollToTop() {
+    if (this.productsContainer) {
+      this.productsContainer.nativeElement.scrollTo({ top: 0, behavior: 'smooth' }); // Desplaza el contenedor
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // Fallback a la ventana
     }
   }
 }
