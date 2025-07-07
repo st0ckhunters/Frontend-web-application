@@ -22,12 +22,12 @@ h2{
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
+  grid-template-columns: repeat(3, 1fr);
   gap: 50px;
   /*margin: 70px auto;*/
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
-  max-width: 1200px; /* Opcional: limita el ancho total */
-  padding: 0 20px; /* Espaciado lateral */
+  max-width: 1200px;
+  padding: 0 20px;
 }

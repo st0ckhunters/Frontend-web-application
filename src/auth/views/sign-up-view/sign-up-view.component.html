@@ -14,7 +14,7 @@
         <img src="https://cdn-icons-png.flaticon.com/128/1828/1828413.png" alt="user" width="20px" />
       </div>
       <div *ngIf="registerForm.get('name')?.hasError('required') && registerForm.get('name')?.touched" class="error">
-        El nombre es obligatorio
+        {{ 'SignUpAuth.NameReq'|translate }}
       </div>
     </div>
 
@@ -26,7 +26,7 @@
         <img src="https://cdn-icons-png.flaticon.com/128/1828/1828413.png" alt="user" width="20px" />
       </div>
       <div *ngIf="registerForm.get('lastName')?.hasError('required') && registerForm.get('lastName')?.touched" class="error">
-        El apellido es obligatorio
+        {{ 'SignUpAuth.LastNameReq'|translate }}
       </div>
     </div>
 
@@ -38,10 +38,10 @@
         <img src="https://cdn-icons-png.flaticon.com/128/11195/11195330.png" alt="mail" width="20px" />
       </div>
       <div *ngIf="registerForm.get('email')?.hasError('required') && registerForm.get('email')?.touched" class="error">
-        El correo es obligatorio
+        {{ 'SignUpAuth.EmailReq'|translate }}
       </div>
       <div *ngIf="registerForm.get('email')?.hasError('email') && !registerForm.get('email')?.hasError('required') && registerForm.get('email')?.touched" class="error">
-        Correo inválido
+        {{ 'SignUpAuth.CorrInvalid'|translate }}
       </div>
     </div>
 
@@ -53,7 +53,7 @@
         <img src="https://cdn-icons-png.flaticon.com/128/4837/4837031.png" alt="lock" width="20px" />
       </div>
       <div *ngIf="registerForm.get('password')?.hasError('required') && registerForm.get('password')?.touched" class="error">
-        Contraseña requerida
+        {{ 'SignUpAuth.ContraseñaReq'|translate }}
       </div>
     </div>
 

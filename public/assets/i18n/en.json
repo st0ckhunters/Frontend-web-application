@@ -1,17 +1,13 @@
 {
-
-
   "Footer": {
-    "Developed by":"Developed by",
+    "Developed by": "Developed by",
     "All Copyright Reserved": "All Copyright Reserved",
     "follow us on our networks": "follow us on our networks"
   },
-
   "Header": {
     "Sign up": "Sign up",
     "Login": "Login"
   },
-
   "LoginView": {
     "Login": "Login",
     "Email Address": "Email Address",
@@ -19,11 +15,14 @@
     "Enter": "Enter"
   },
   "AccountView": {
+    "FirstName": "First Name",
+    "LastName": "Last Name",
     "Email": "Email",
     "Role": "Role",
-    "CreatedAt": "CreatedAt"
+    "CreatedAt": "CreatedAt",
+    "Organization_id": "Organization id",
+    "ID": "ID"
   },
-
   "SignupView": {
     "Register": "Register",
     "name": "Name",
@@ -31,7 +30,6 @@
     "Email Address": "Email Address",
     "Password": "Password"
   },
-
   "Navegation": {
     "Reports": "Reports",
     "Sales": "Sales",
@@ -51,7 +49,6 @@
     "Basic_item4": "Simple Reports",
     "Basic_item5": "Acces to any device",
     "Basic_Start": "Start for Free",
-
     "Pro_item1": "Up to 1000 products",
     "Pro_item2": "up to 3 users",
     "Pro_item3": "Advance reports and exportation",
@@ -59,7 +56,6 @@
     "Pro_item5": "Customers and providers management",
     "Pro_item6": "Email support",
     "Pro_Start": "Update to Pro Plan",
-
     "Business_item1": "Unlimited products",
     "Business_item2": "Unlimited users",
     "Business_item3": "Multi warehouses and Multi branch",
@@ -67,38 +63,40 @@
     "Business_item5": "Priority Support",
     "Business_item6": "Beginning training included",
     "Business_Update": "Update to Business Plan"
-
-
   },
-
   "NotFoundMessage": {
     "msgnf": "Oops! The page you're looking for doesn't exist.",
     "Return": "Return"
   },
-
   "Account": {
     "Welcome": "Welcome, select an administrator"
   },
-
   "Nav-bar": {
     "Clients": "Clients",
     "Products": "Products",
-    "Sales" : "Sales",
-    "Reports" : "Reports"
+    "Sales": "Sales",
+    "Reports": "Reports"
   },
   "Products": "Products",
-
-  "Reports" : "Reports",
+  "Reports": "Reports",
   "Daily": "Daily Sales",
   "Product name": "Product name...",
   "Sales": "Sales",
-
   "Profile": {
     "Logout": "Logout",
     "Configure": "Settings"
   },
+  "LoginAuth": {
+    "ConReq": "Password required",
+    "CorrReq": "Invalid email"
+  },
 
-  "ConReq": "Password required",
-  "CorrReq": "Invalid email"
+  "SignUpAuth": {
+    "NameReq": "Name is required",
+    "LastNameReq": "Last name is required",
+    "EmailReq": "Email is required",
+    "CorrInvalid": "Email invalid",
+    "ContraseñaReq": "Password is required"
+  }
 }
 

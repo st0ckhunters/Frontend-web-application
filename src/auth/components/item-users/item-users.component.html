@@ -1,7 +1,5 @@
 <mat-card class="example-card" appearance="outlined">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-  </mat-card-header>
+
 
   <img *ngIf="user.profile_image_url" class="imgCard" mat-card-image src="https://cdn-icons-png.flaticon.com/128/18831/18831899.png" alt="Profile Image">
   <img *ngIf="!user.profile_image_url" class="imgCard" mat-card-image src="https://cdn-icons-png.flaticon.com/128/18831/18831899.png" alt="Default Profile Image">
@@ -10,9 +8,15 @@
     {{ user.username }}
   </mat-card-title>
   <mat-card-content>
+    <p><strong>{{ 'AccountView.FirstName' | translate }}:</strong> {{ user.first_name }}</p>
+    <p><strong>{{ 'AccountView.LastName' | translate }}:</strong> {{ user.last_name }}</p>
+
+    <p><strong>{{ 'AccountView.ID' | translate }}:</strong> {{ user.id }}</p>
     <p><strong>{{ 'AccountView.Email' | translate }}:</strong> {{ user.email }}</p>
     <p><strong>{{ 'AccountView.Role' | translate }}:</strong> {{ user.role }}</p>
     <p><strong>{{ 'AccountView.CreatedAt' | translate }}:</strong> {{ user.created_at | date: 'short' }}</p>
+    <p><strong>{{'AccountView.Organization_id' | translate}}: </strong>{{user.organization_id}}</p>
+
   </mat-card-content>
   <mat-card-actions>
     <button routerLink="/reports" mat-button>SELECT</button>
