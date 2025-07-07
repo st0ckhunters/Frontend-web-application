@@ -96,6 +96,9 @@
   "Profile": {
     "Logout": "Logout",
     "Configure": "Settings"
-  }
+  },
+
+  "ConReq": "Password required",
+  "CorrReq": "Invalid email"
 }
 

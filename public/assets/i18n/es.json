@@ -97,5 +97,7 @@
   "Profile": {
     "Logout": "Cerrar sesión",
     "Configure": "Ajustes"
-  }
+  },
+  "ConReq": "Contraseña requerida",
+  "CorrReq": "Correo invalido"
 }
