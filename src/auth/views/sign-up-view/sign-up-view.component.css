@@ -23,9 +23,15 @@
 
 }
 h2 {
+  font-size: 48px;
   text-align: center;
+  text-wrap: nowrap;
+  overflow: hidden;
   margin-bottom: 30px;
-  font-size: 35px;
+  background: linear-gradient(30deg, #ff0037, #0776f4);
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .login-form .form-group {
