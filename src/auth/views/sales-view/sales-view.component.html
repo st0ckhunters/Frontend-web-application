@@ -1,5 +1,5 @@
 <app-nav-bar></app-nav-bar>
-<div class="sales-container">
+<div class="sales-container" #salesContainer>
   <h2>{{ 'Sales' | translate }}</h2>
   <div class="search-controls">
     <input type="text" [(ngModel)]="searchTerm" (input)="onSearch()" placeholder="{{ 'Product name' | translate }}" class="search-input" />

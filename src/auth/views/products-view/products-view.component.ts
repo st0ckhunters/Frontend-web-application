@@ -49,7 +49,7 @@ export class ProductsViewComponent implements OnInit {
     if (this.newProduct.name && this.newProduct.category_id) {
       this.productsService.addProduct(this.newProduct).subscribe({
         next: (response) => {
-          this.loadProducts(); // Recarga la lista para reflejar el nuevo producto
+          this.loadProducts();
           this.newProduct = { id: '', name: '', image_url: '', category_id: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString() };
           this.showForm = false;
           console.log('Producto añadido:', response);

@@ -25,6 +25,19 @@
 
 }
 
+.search-container{
+  align-items: center;
+  justify-self: center;
+  margin-left: 35px;
+  margin-top: 20px;
+  width: 50%;
+  height: 30px;
+}
+input{
+  font-size:  1.0rem;
+  text-align: start;
+  height: 25px;
+}
 
 h3{
   color: white;

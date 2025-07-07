@@ -3,17 +3,16 @@
 <h2 class="point">🟢</h2>
 <hr />
 
+<div class="search-container">
+  <input type="text" [(ngModel)]="searchTerm" (input)="filterClients()" placeholder="Buscar por nombre o apellido" />
+</div>
+
 <div class="client-list">
-  <mat-card *ngFor="let client of clients" class="client-card">
+  <mat-card *ngFor="let client of filteredClients" class="client-card">
     <strong>{{ client.first_name }} {{ client.last_name }}</strong><br>
     <p>Company: {{ client.company }}</p>
     <p *ngIf="client.phone">Phone: {{ client.phone }}</p>
-    <p *ngIf="client.dni">DNI: {{ client.dni }}</p>
     <p *ngIf="client.status">Status: {{ client.status }}</p>
     <button (click)="openClientDetails(client)">Ver más</button>
   </mat-card>
 </div>
-
-<h3><strong>Añadir información del Cliente</strong></h3>
-
-
