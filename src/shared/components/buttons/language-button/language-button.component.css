@@ -1,18 +1,29 @@
-/* Elimina el check generado internamente */
-.mat-button-toggle-checked .mat-button-toggle-label-content::before {
-  display: none !important;
-  content: none !important;
+.language-container {
+  display: flex;
+  align-items: center;
 }
 
-/* En algunas versiones, también usan un SVG o pseudo icono */
-.mat-button-toggle-checked svg,
-.mat-button-toggle-checked mat-icon {
-  display: none !important;
-  width: 0 !important;
-  height: 0 !important;
+.language-option {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #7db9c1;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.5s;
 }
 
-/* Opcional: eliminar espacio innecesario */
-.mat-button-toggle-label-content {
-  padding-left: 0 !important;
+.language-option.selected {
+  background-color: #ec9833;
+  color: white;
+}
+
+.language-option:hover {
+  background-color: #ffffff;
+}
+
+.language-option:focus {
+  outline: none;
 }

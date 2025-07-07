@@ -1,0 +1,55 @@
+.profile-icon {
+  color: white;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon:hover {
+  background-color: #81b8fb;
+}
+
+.profile-image {
+  width: 32px;
+  height: 32px;
+  background-image: url('https://cdn-icons-png.flaticon.com/128/17847/17847573.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
+
+}
+.configure-image{
+  width: 24px;
+  height: 24px;
+  background-image: url('https://cdn-icons-png.flaticon.com/128/561/561135.png');
+  background-size: cover;
+  background-position: center;
+}
+.exit-image{
+  width: 24px;
+  height: 24px;
+  background-image: url('https://cdn-icons-png.flaticon.com/128/1828/1828427.png');
+  background-size: cover;
+  background-position: center;
+}
+
+mat-menu {
+  background-color: #1a73e8;
+  color: white;
+}
+
+mat-menu button {
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+mat-menu button:hover {
+  background-color: #81b8fb;
+}
+mat-icon-button{
+  border-radius: 100px;
+  border: 2px solid #7db9c1;
+}

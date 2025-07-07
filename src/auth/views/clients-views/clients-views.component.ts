@@ -3,7 +3,7 @@ import { MatCardModule } from '@angular/material/card';
 import { Clients } from '../../models/clients';
 import { ClientsService } from '../../services/clients.service';
 import { FormsModule } from '@angular/forms';
-import {DatePipe, NgForOf} from '@angular/common';
+import {DatePipe, NgForOf, NgIf} from '@angular/common';
 import { HeaderComponent } from '../../../shared/components/header/header.component';
 import { NavBarComponent } from '../../../shared/components/nav-bar/nav-bar.component';
 import { RouterLink } from '@angular/router';
@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-clients-views',
   standalone: true,
-  imports: [MatCardModule, FormsModule, NgForOf, HeaderComponent, NavBarComponent, RouterLink, DatePipe],
+  imports: [MatCardModule, FormsModule, NgForOf, HeaderComponent, NavBarComponent, RouterLink, DatePipe, NgIf],
   templateUrl: './clients-views.component.html',
   styleUrls: ['./clients-views.component.css']
 })

@@ -1,4 +1,4 @@
-<div class="products-container">
+<div class="products-container" #productsContainer>
   <button (click)="toggleForm()" class="add-button">{{ editProduct ? ('Edit Product' | translate) : ('Add Product' | translate) }}</button>
   <div *ngIf="showForm" class="form-container">
     <h3>{{ editProduct ? ('Edit Product' | translate) : ('New Product' | translate) }}</h3>
@@ -22,7 +22,7 @@
       <p class="product-date">{{ 'Created' | translate }}: {{ product.created_at | date:'medium' }}</p>
       <p class="product-date">{{ 'Updated' | translate }}: {{ product.updated_at | date:'medium' }}</p>
       <div class="product-buttons">
-        <button (click)="editProductForm(product)" class="edit-button">{{ 'Edit' | translate }}</button>
+        <button (click)="onEditClick(product)" class="edit-button">{{ 'Edit' | translate }}</button>
         <button (click)="deleteProduct(product.id)" class="delete-button">{{ 'Delete' | translate }}</button>
       </div>
     </div>

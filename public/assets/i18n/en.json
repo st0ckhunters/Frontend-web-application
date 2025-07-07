@@ -89,7 +89,13 @@
   "Products": "Products",
 
   "Reports" : "Reports",
-  "Daily": "Daily Sales"
+  "Daily": "Daily Sales",
+  "Product name": "Product name...",
+  "Sales": "Sales",
 
+  "Profile": {
+    "Logout": "Logout",
+    "Configure": "Settings"
+  }
 }
 
