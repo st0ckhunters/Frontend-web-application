@@ -90,6 +90,12 @@
   "Products": "Productos",
 
   "Reports" : "Reportes",
-  "Daily": "Ventas del día"
+  "Daily": "Ventas del día",
+  "Product name": "Nombre del producto...",
+  "Sales": "Ventas",
 
+  "Profile": {
+    "Logout": "Cerrar sesión",
+    "Configure": "Ajustes"
+  }
 }

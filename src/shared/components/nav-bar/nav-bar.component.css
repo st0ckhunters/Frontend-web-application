@@ -1,49 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .logo{
   border-radius: 20px;
   margin-left: 10px;
 }
 
 mat-toolbar{
-  width: auto;
+  width: 100%;
   background-color: #1a73e8;
   font-family: "Roboto", sans-serif;
-
-  /*#353d46;*/
 }
+
 .start{
   display: flex;
   align-items: center;
   margin-right: auto;
   margin-left: 10px;
   color: white;
-
 }
 
 .options{
   display: flex;
-  /*margin-left: 600px;*/
   margin-left: auto;
   margin-right: 1px;
   gap: 30px;
   align-items: center;
   font-family: "Roboto", sans-serif;
 }
+
 button{
   background-color: #1a73e8;
-  border-radius:  20px;
+  border-radius: 20px;
   border: none;
-
   width: 80px;
 }
+
 .mid{
   margin-left: auto;
   margin-right: auto;
 }
-.end{
-  color: white;
 
+.end{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  margin-right: 10px;
+  gap: 10px;
 }
+
 a{
   display: flex;
   color: white;
@@ -53,22 +56,22 @@ a{
   align-items: center;
   justify-content: center;
 }
-.login{
 
+.login{
   align-items: center;
   justify-content: center;
   border-radius: 10px;
   background-color: #1a73e8;
 }
-.options a:hover {
-  color: #f8ec0b;
-}
+
 .options a:hover {
   color: #19465e;
 }
+
 .options button:hover {
   background-color: #81b8fb;
 }
+
 app-theme-button{
   margin-right: 20px;
 }

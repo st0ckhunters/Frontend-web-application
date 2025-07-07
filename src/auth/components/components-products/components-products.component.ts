@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { DatePipe, NgForOf, NgIf } from '@angular/common';
 import { Product } from '../../models/products';
@@ -16,10 +16,11 @@ import { FormsModule } from '@angular/forms';
     TranslatePipe
   ],
   templateUrl: './components-products.component.html',
-  styleUrl: './components-products.component.css'
+  styleUrls: ['./components-products.component.css']
 })
 export class ComponentsProductsComponent implements OnInit {
   @Input() productinfo: Product[] = [];
+  @ViewChild('productsContainer') productsContainer!: ElementRef;
   newProduct: Product = { id: '', name: '', image_url: '', category_id: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString() };
   editProduct: Product | null = null;
   showForm: boolean = false;
@@ -55,6 +56,11 @@ export class ComponentsProductsComponent implements OnInit {
         console.error('Error al añadir producto:', err);
       }
     });
+  }
+
+  onEditClick(product: Product): void {
+    this.editProductForm(product);
+    this.scrollToTop();
   }
 
   editProductForm(product: Product): void {
@@ -95,6 +101,14 @@ export class ComponentsProductsComponent implements OnInit {
           console.error('Error al eliminar producto:', err);
         }
       });
+    }
+  }
+
+  scrollToTop() {
+    if (this.productsContainer) {
+      this.productsContainer.nativeElement.scrollTo({ top: 0, behavior: 'smooth' }); // Desplaza el contenedor
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // Fallback a la ventana
     }
   }
 }

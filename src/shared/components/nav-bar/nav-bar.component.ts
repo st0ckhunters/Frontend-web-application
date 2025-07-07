@@ -6,6 +6,7 @@ import {LanguageButtonComponent} from '../buttons/language-button/language-butto
 import {TranslatePipe} from '@ngx-translate/core';
 import {RouterLink} from '@angular/router';
 import {ThemeButtonComponent} from '../buttons/theme-button/theme-button.component';
+import {ProfileButtonComponent} from '../buttons/profile-button/profile-button.component';
 
 @Component({
   selector: 'app-nav-bar',
@@ -18,6 +19,7 @@ import {ThemeButtonComponent} from '../buttons/theme-button/theme-button.compone
     TranslatePipe,
     RouterLink,
     ThemeButtonComponent,
+    ProfileButtonComponent,
   ],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.css'

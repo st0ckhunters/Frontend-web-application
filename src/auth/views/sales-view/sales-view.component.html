@@ -2,7 +2,7 @@
 <div class="sales-container">
   <h2>{{ 'Sales' | translate }}</h2>
   <div class="search-controls">
-    <input type="text" [(ngModel)]="searchTerm" (input)="onSearch()" placeholder="{{ 'Search' | translate }}" class="search-input" />
+    <input type="text" [(ngModel)]="searchTerm" (input)="onSearch()" placeholder="{{ 'Product name' | translate }}" class="search-input" />
   </div>
 
   <div *ngIf="showForm" class="form-container">
