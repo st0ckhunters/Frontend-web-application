@@ -97,6 +97,10 @@
     "EmailReq": "Email is required",
     "CorrInvalid": "Email invalid",
     "ContraseñaReq": "Password is required"
+  },
+  "REPORTS": {
+    "LOW_PRODUCTS": "Low sales",
+    "TOP_PRODUCTS": "Top Sales"
   }
 }
 

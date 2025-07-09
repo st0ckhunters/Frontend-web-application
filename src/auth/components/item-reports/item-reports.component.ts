@@ -9,9 +9,11 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { CurrencyPipe } from '@angular/common';
 import { Report } from '../../models/reports';
 import { Chart, ChartConfiguration, registerables } from 'chart.js';
-import {NavBarComponent} from '../../../shared/components/nav-bar/nav-bar.component';
+import { NavBarComponent } from '../../../shared/components/nav-bar/nav-bar.component';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
-//registrar chart components
+// Registrar chart components
 Chart.register(...registerables);
 
 @Component({
@@ -68,7 +70,10 @@ export class ItemReportsComponent implements OnInit {
 
   private createChart(): void {
     const ctx = this.salesChartRef.nativeElement.getContext('2d');
-    if (!ctx) return;
+    if (!ctx) {
+      console.error('No se pudo obtener el contexto del canvas');
+      return;
+    }
 
     const config: ChartConfiguration = {
       type: 'bar',
@@ -115,12 +120,39 @@ export class ItemReportsComponent implements OnInit {
   }
 
   downloadPDF(): void {
-    console.log('Descargando reporte PDF...');
+    console.log('Iniciando descarga de PDF...');
+    const reportContainer = document.querySelector('.reports-container') as HTMLElement;
+    if (!reportContainer) {
+      console.error('No se encontró el contenedor del reporte (.reports-container)');
+      return;
+    }
 
-    const link = document.createElement('a');
-    link.href = 'data:text/plain;charset=utf-8,Reporte de Inventario - Ejemplo';
-    link.download = `reporte_inventario_${new Date().toISOString().split('T')[0]}.txt`;
-    link.click();
+    // Forzar actualización del gráfico antes de capturar
+    if (this.chart) {
+      this.chart.render();
+    }
+
+    // Agregar un pequeño retraso para asegurar que el gráfico esté renderizado
+    setTimeout(() => {
+      html2canvas(reportContainer, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: '#ffffff',
+        logging: true // Para depuración
+      }).then(canvas => {
+        console.log('Canvas capturado con éxito');
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF('p', 'mm', 'a4');
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+
+        pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+        pdf.save(`reporte_inventario_${new Date().toISOString().split('T')[0]}.pdf`);
+        console.log('PDF generado y descargado');
+      }).catch(error => {
+        console.error('Error al generar el PDF:', error);
+      });
+    }, 500); // Retraso de 500ms para asegurar renderización
   }
 
   updateDashboard(data: any): void {
