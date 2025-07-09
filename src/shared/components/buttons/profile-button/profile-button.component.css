@@ -6,10 +6,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  BACKGROUND-COLOR: #e8e8e8;
+  transition: background-color 0.8s;
+
 }
 
 .profile-icon:hover {
-  background-color: #81b8fb;
+  background-color: #ea9e42;
 }
 
 .profile-image {

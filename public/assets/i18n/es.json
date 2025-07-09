@@ -114,5 +114,9 @@
     "EmailReq": "El correo es obligatorio",
     "CorrInvalid": "Correo inválido",
     "ContraseñaReq": "Contraseña requerida"
+  },
+  "REPORTS": {
+    "LOW_PRODUCTS": "Ventas bajas",
+    "TOP_PRODUCTS": "Ventas altas"
   }
 }
