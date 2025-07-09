@@ -1,0 +1,19 @@
+<div class="modal-container">
+  <h2>{{ client.first_name }} {{ client.last_name }}</h2>
+  <div class="modal-content">
+    <p><strong>Compañía:</strong> {{ client.company }}</p>
+    <p *ngIf="client.id"><strong>ID:</strong> {{ client.id }}</p>
+    <p *ngIf="client.first_name"><strong>First Name:</strong> {{ client.first_name }}</p>
+    <p *ngIf="client.last_name"><strong>Last Name:</strong> {{ client.last_name }}</p>
+
+    <p *ngIf="client.phone"><strong>Teléfono:</strong> {{ client.phone }}</p>
+    <p *ngIf="client.email"><strong>Email:</strong> {{ client.email }}</p>
+    <p *ngIf="client.dni"><strong>DNI:</strong> {{ client.dni }}</p>
+    <p *ngIf="client.status"><strong>Estado:</strong> {{ client.status }}</p>
+    <p *ngIf="client.registration_date"><strong>Fecha de registro:</strong> {{ client.registration_date | date:'short' }}</p>
+    <p *ngIf="client.created_at"><strong>Fecha de creación:</strong> {{ client.created_at | date:'short' }}</p>
+  </div>
+  <div class="modal-actions">
+    <button mat-raised-button color="primary" (click)="closeDialog()">Cerrar</button>
+  </div>
+</div>

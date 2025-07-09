@@ -4,7 +4,6 @@ mat-card {
   border-radius: 30px;
   justify-content: center;
   align-items: center;
-  /*margin: 100px;*/
   margin: auto 1px 100px 1px;
   overflow: hidden;
   display: flex;
@@ -22,19 +21,21 @@ mat-card-title {
 }
 
 .imgCard {
-  margin-top: auto;
+  margin-top: 10px;
   scroll-behavior: smooth;
   width: 80px;
   height: 80px;
-  border-radius: 50%;
+  border-radius: 100%;
+  border: 3px solid rgb(9, 124, 236);
 }
 
 mat-card-content {
-  text-align: center;
+  text-align: start;
   overflow: auto;
   flex-grow: 1;
   padding: 0 10px;
 }
+
 
 mat-card-content p {
   margin: 5px 0;

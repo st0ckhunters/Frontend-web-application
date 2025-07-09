@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {DatePipe, NgForOf, NgIf} from '@angular/common';
+import { DatePipe, NgForOf, NgIf } from '@angular/common';
 import { SalesService } from '../../services/sales.service';
 import { Sale } from '../../models/sales';
 import { NavBarComponent } from '../../../shared/components/nav-bar/nav-bar.component';
 import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
+import { Product } from '../../models/products';
 
 @Component({
   selector: 'app-sales-view',
@@ -39,6 +40,7 @@ export class SalesViewComponent implements OnInit {
   };
   editSale: Sale | null = null;
   errorMessage: string = '';
+  @ViewChild('salesContainer') salesContainer!: ElementRef; // Referencia al contenedor
 
   constructor(private salesService: SalesService) {}
 
@@ -76,6 +78,9 @@ export class SalesViewComponent implements OnInit {
       created_at: new Date().toISOString()
     };
     this.errorMessage = '';
+    if (this.showForm) {
+      this.scrollToTop(); // Desplazar al inicio al abrir el formulario para añadir
+    }
   }
 
   addSale(): void {
@@ -103,6 +108,7 @@ export class SalesViewComponent implements OnInit {
     this.newSale = { ...sale };
     this.showForm = true;
     this.errorMessage = '';
+    this.scrollToTop(); // Desplazar al inicio al editar
   }
 
   updateSale(): void {
@@ -148,5 +154,13 @@ export class SalesViewComponent implements OnInit {
       sale.sale_date.includes(this.searchTerm) ||
       sale.status.toLowerCase().includes(this.searchTerm.toLowerCase())
     );
+  }
+
+  scrollToTop() {
+    if (this.salesContainer) {
+      this.salesContainer.nativeElement.scrollTo({ top: 0, behavior: 'smooth' }); // Desplaza el contenedor
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // Fallback a la ventana
+    }
   }
 }
